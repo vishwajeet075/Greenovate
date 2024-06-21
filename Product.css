@@ -9,14 +9,13 @@ body{
 
 .navbar-container {
     width: 100%;
-    background-color:  #E3DAD5;
+    background-color: #E3DAD5;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content:flex-start;/**/
+    justify-content: flex-start;
     position: relative;
     z-index: 100;
-    
 }
 
 .navbar {
@@ -27,12 +26,11 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-    margin-left: 60px;/**/
-    width: 100%;/**/
+    margin-left: 60px;
+    width: 100%;
     max-width: 1313px;
     position: fixed;
     top: 38px;
-    z-index: 100;
     z-index: 50;
 }
 
@@ -40,36 +38,67 @@ body{
     height: 25px;
 }
 
+.navbar-menu {
+    position: relative;
+}
+
 .navbar-menu ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    align-items: center; /* Ensure vertical alignment */
     gap: 20px;
 }
 
+
 .navbar-menu ul li {
-    display: inline;
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
 }
+
 
 .navbar-menu ul li a {
     text-decoration: none;
     color: #1E572C;
     font-weight: 600;
     font-size: 16px;
-    padding: 8px 16px;
+    padding: 8px 16px; /* Adjust padding if necessary */
     border-radius: 4px;
     transition: background-color 0.3s;
+    display: flex;
+    align-items: center; /* Ensure vertical alignment */
 }
 
-.navbar-menu ul li a:hover
-{
-    background-color: #28a745;
-    color: #fff;
+
+.navbar-menu ul li a:hover ~ .underline,
+.navbar-menu ul li a:focus ~ .underline {
+    width: 100%;
+    left: 0;
 }
-.navbar-menu ul li a.contact-button{
+
+.navbar-menu .underline {
+    position: absolute;
+    bottom: -5px; /* Adjust based on your design */
+    height: 2px;
+    background-color: #28a745;
+    width: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu ul li a.contact-button {
     border-radius: 30px;
     background-color: #28a745;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+}
+
+.navbar-menu ul li a.contact-button:hover {
+    background-color: #1E572C;
     color: #fff;
 }
 
@@ -118,6 +147,12 @@ body{
     background-color: #28a745;
     color: darkgreen;
 }
+
+.contact-icon {
+    font-size: 18px;
+}
+
+
 
 .header{
     width: 100%;
@@ -181,14 +216,14 @@ body{
     width: 550px;
     height: 3px;
     margin-top: 50px;
-    margin-left: 350px;
+    margin-left: 250px;
     border-radius: 25px;
     background: linear-gradient(to right,#222826,#066DB7,#61C977);
 }
 .gradient5{
     width: 1256px;
     height: 3px;
-    margin-top: -140px;
+    margin-top: -30px;
     margin-left: 120px;
     border-radius: 25px;
     background: linear-gradient(to right,#222826,#066DB7,#61C977);
@@ -247,6 +282,7 @@ body{
     align-items: center;
     justify-content: flex-start;
     margin-top: 150px;
+    margin-left: 65px;
   
 }
 
@@ -267,7 +303,7 @@ body{
     font-weight: 700;
     font-size: 18px;
     line-height: 24.59px;
-    margin-left: 350px;
+    margin-left: 370px;
 }
 
 .container1 {
@@ -324,8 +360,8 @@ body{
 .first{
     height: 280px;
     position: relative;
-    top: 150px;
-    margin-left: 70px;
+    top: 138px;
+    margin-left: 100px;
     font-weight: 700;
     font-size: 60px;
     line-height: 81.96px;
@@ -333,21 +369,72 @@ body{
 .b{
     width: 936px;
     height: 150px;
-    margin-top: 100px;
-    margin-left: 70px;
+    margin-top: 38px;
+    margin-left: 100px;
     font-weight: 500;
     font-size: 18px;
     line-height: 24.59px;
 }
-.row1{
-    margin-top: 70px;
-    margin-left: 60px;
+.containerx {
+    margin-top: 57px;
+    margin-left: 100px;
 }
-.row2{
-    margin-top: 20px;
-    margin-left: 60px;
+.row {
+    display: flex;
+    gap: 30px;
+    margin-top: 24px;
+}
+.row img {
+    width: 319px; /* Adjusted width to match the provided image */
+    height: 320px;
+    position: relative;
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px; /* Adjust height based on the design image */
+    background-size: cover;
 }
 
+.text {
+    position: absolute;
+    bottom: 10px; /* Adjusted to be at the bottom of the overlay */
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: center;
+    width: 90%;
+}
+.img1 .overlay {
+    background: url(Images/rect1.png);
+    border-radius: 15px;
+    height: 300px;
+    margin-bottom: 20px;
+    width: 911px;
+   
+}
+.img2 .overlay {
+    background: url(Images/rect2.png);
+    height: 325px;
+    width: 319px;
+    border-radius: 15px;
+}
+.img3 .overlay {
+    background: url(Images/rect3.png);
+    width: 470px;
+    height: 320px;
+    margin-bottom: 5px;
+}
+.img4 .overlay {
+    background: url('Images/rect4.png'); /* Replace with your fourth rectangle design image path */
+    width: 744px;
+    height: 320px;
+    border-radius: 42px;
+    margin-bottom: 5px;
+}
 .circle1{
     width: 132.29px;
     height: 132.29px;
@@ -417,6 +504,7 @@ body{
     font-size: 60px;
     line-height: 81.96px;
     color: #222826;
+    margin-top: -40px;
 }
 
 .d{
@@ -469,7 +557,7 @@ body{
     color:black;
 }
 
-.metrics{
+.metrics {
     width: 646px;
     height: 164px;
     margin-top: -250px;
@@ -477,18 +565,15 @@ body{
     font-weight: 700;
     font-size: 60px;
     line-height: 81.96px;
-    }
-    
-    .container {
+}
+.container {
     text-align: center;
     margin-top: 40px;
     width: 100%;
-    height: 700px;
     margin-left: 120px;
-    }
-    
-    .buttons {
-    width:429px ;
+}
+.buttons {
+    width: 429px;
     height: 48px;
     display: flex;
     justify-content: center;
@@ -499,65 +584,85 @@ body{
     font-weight: 400;
     font-size: 22px;
     line-height: 30.05px;
-    background-color:#F2F2F2;
+    background-color: #F2F2F2;
     position: relative;
-    }
-    
-    .custom-button {
+}
+.custom-button {
     flex: 1;
-    padding: 10px 20px;
+    padding: 10px 0;
     border: none;
-    background-color:#F2F2F2;
+    background-color: transparent;
     color: #333;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.6s ease, color 0.6s ease; /* Added color transition */
     font-size: 16px;
     font-weight: bold;
-    border-radius: 200px;
     z-index: 1;
     position: relative;
-    }
-    
-    .custom-button.active {
+    border-radius: 200px;
+    margin: 0;
+    box-shadow: none;
+}
+.custom-button.active {
     background-color: #000;
     color: #fff;
-    }
-    
-    .metrics1 {
+    border-radius: 200px;
+}
+.slider {
+    position: absolute;
+    width: 33.33%;
+    height: 100%;
+    background-color: #000;
+    border-radius: 250px;
+    transition: left 0.6s ease; /* Updated transition timing for smoother movement */
+    z-index: 0;
+    top: 0;
+    left: 0;
+}
+#industry-btn.active ~ .slider {
+    left: 0;
+}
+#people-btn.active ~ .slider {
+    left: 33.33%;
+}
+#planet-btn.active ~ .slider {
+    left: 66.66%;
+}
+.metrics1 {
     width: 100%;
     height: 400px;
     display: flex;
     justify-content: space-evenly;
-    margin-top: 100px;
-    margin-left:-100px;
-    }
-    
-    .metric {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+.metric {
     background-color: #fff;
     width: 400px;
     height: 350px;
-    }
-    
-    .metric h3 {
+}
+.metric h3 {
     font-weight: 700;
     font-size: 60px;
     line-height: 81.96px;
     color: #222826;
     margin-bottom: 10px;
-    }
-    
-    #p {
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 24.59px;
-    color:#222826 ;
-    }
-    .p1{
+}
+.metric img {
+    margin-left: 15px; /* Added margin for spacing */
+}
+.p1 {
     font-weight: 700;
     font-size: 22px;
     line-height: 30.05px;
-    }
-    .slider {
+}
+.p2 {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24.59px;
+    color: #222826;
+}
+   /* .slider {
         position: absolute;
         width: 33.33%;
         height: 100%;
@@ -565,7 +670,7 @@ body{
         border-radius: 25px;
         transition: transform 0.3s ease;
         z-index: 0;
-    }
+    }*/
 
 
 
@@ -802,7 +907,15 @@ body{
 
 
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
+
+    body{
+        width: 480px;
+        font-family: "Manrope", sans-serif;
+        overscroll-behavior: none;
+        margin: 0;
+        padding: 0;
+    }
     .menu-icon {
         display: block;
     }
