@@ -22,8 +22,9 @@
                     <li><a href="/Product">Product</a></li>
                     <li><a href="#learn-ccus">Learn CCUS</a></li>
                     <li><a href="/Calculator">CO2 Calculator</a></li>
-                    <li><a href="/Contact" class="contact-button">Contact Us</a></li>
+                    <li><a href="/Contact" class="contact-button"><span class="contact-icon">✉️</span> Contact Us</a></li>
                 </ul>
+                <div class="underline"></div>
             </nav>
         </div>
         <div id="navbar-dropdown" class="navbar-dropdown">
@@ -33,12 +34,12 @@
                     <li><a href="Product.html">Product</a></li>
                     <li><a href="#learn-ccus">Learn CCUS</a></li>
                     <li><a href="Calculator.html">CO2 Calculator</a></li>
-                    <li><a href="Contact.html" class="contact-button">Contact Us</a></li>
+                    <li><a href="Contact.html" class="contact-button" ><span class="contact-icon">✉️</span> Contact Us</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-  
+    
    
    
     <div class="header">
@@ -89,14 +90,34 @@
 
         We can go on and on....</div>
 
-        <div class="row1">
-        <img src="product -1.png" alt="">
-        <img src="product - 2.png" alt=""  style="margin-left: 30px; height: 320px;">
-    </div>
-       <div class="row2">
-        <img src="product - 3.png" alt="" style="border-radius: 15px; width: 488px;height: 320px;">
-        <img src="product - 4.png" alt="" style="margin-left: 30px;width: 744px; height: 320px;border-radius: 16px 15px 15px 15px ;">
-    </div>
+        <div class="containerx">
+            <div class="row" >
+                <div class="img1" style="position: relative;">
+                    <img src="product -1.png" alt="" style="width: 911px; height: 320;border-radius: 15px;">
+                    <div class="overlay"></div>
+                    <div class="text"><span style="font-weight: 700;font-size: 30px; margin-left: -250px;">Easy volume scalability for expansions</span><br>
+                        <span style="font-weight: 500;margin-left: -470px;">Scale effortlessly for future growth</span></div>
+                </div>
+                <div class="img2" style="position: relative;">
+                    <img src="product - 2.png" alt="" style="height: 320px; width: 319px; border-radius: 15px;">
+                    <div class="overlay"></div>
+                    <div class="text">Plug & play</div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 24px;">
+                <div class="img3" style="position: relative;">
+                    <img src="product - 3.png" alt="" style="border-radius: 15px; width: 471px; height: 320px;">
+                    <div class="overlay"></div>
+                    <div class="text"><span style="font-weight: 700;font-size: 30px; margin-left: -150px;">Easily portable</span><br>
+                        <span style="font-weight: 500;margin-left: -100px;">Move and install with ease</span></div>
+                </div>
+                <div class="img4" style="position: relative; margin-left: 15px;">
+                    <img src="product - 4.png" alt="" style="height: 320px; width: 744px; ">
+                    <div class="overlay"></div>
+                    <div class="text">Low energy consumption <br> Minimize energy consumption efficiently</div>
+                </div>
+            </div>
+        </div>
  
    </div>
    <div class="circles">
@@ -124,7 +145,9 @@
             <div class="c1">In addition to emission reduction, Tube CC also <span class="span1">optimizes energy consumption,</span> contributing to overall energy efficiency in the factory.</div>
         </div>
         <div class="b2">
-            <img src="f3.png" alt="This is an icon">
+            <img src="f3.png" alt="This is an icon" style="    height: 65px;
+            width: 60px;
+            margin-top: -15px;">
             <div class="c2">The <span class="span1">intuitive interface</span>  makes it easy for operators to monitor performance, adjust settings, and access data insights.</div>
         </div>
     </div>
@@ -136,30 +159,32 @@
         <span style="color:#61C977;">Compounding Impact.</span>
         </div>
         <div class="container">
-        <div class="buttons">
-        <button id="industry-btn" class="custom-button active">Industry</button>
-        <button id="people-btn" class="custom-button " style="border: none;">People</button>
-        <button id="planet-btn" class="custom-button "  style="border:none;">Planet</button>
-        <div class="slider"></div>
+            <div class="buttons">
+                <button id="industry-btn" class="custom-button active">Industry</button>
+                <button id="people-btn" class="custom-button">People</button>
+                <button id="planet-btn" class="custom-button">Planet</button>
+                <div class="slider"></div>
+            </div>
         </div>
+        
         <div class="metrics1">
-        <div class="metric" id="metric-1">
-        <h3 id="metric-1-value">85-90% <img src="arrow.png" alt="" style="width: 61px;height: 61px;margin-left: -15px;"></h3>
-        <p id="metric-1-desc" class="p1">Capture Efficiency</p>
-        <p id="metric-1-detail" class="p2">Tube CC's capture efficiency directly from the emission streams</p>
+            <div class="metric" id="metric-1">
+                <h3 id="metric-1-value">85-90% <img id="metric-1-arrow" src="arrow.png" alt="" style="width: 61px; height: 61px;"></h3>
+                <p id="metric-1-desc" class="p1">Capture Efficiency</p>
+                <p id="metric-1-detail" class="p2">Tube CC's capture efficiency directly from the emission streams</p>
+            </div>
+            <div class="metric" id="metric-2">
+                <h3 id="metric-2-value">80-85% <img id="metric-2-arrow" src="arrow.png" alt="" style="width: 61px; height: 61px;"></h3>
+                <p id="metric-2-desc" class="p1">Conversion Rate</p>
+                <p id="metric-2-detail" class="p2">Converted to liquid Carbon Dioxide</p>
+            </div>
+            <div class="metric" id="metric-3">
+                <h3 id="metric-3-value">30% <img id="metric-3-arrow" src="arrow.png" alt="" style="width: 61px; height: 61px;"></h3>
+                <p id="metric-3-desc" class="p1">Reduction in capital cost</p>
+                <p id="metric-3-detail" class="p2">No installation cost, and much lower regeneration energy requirements</p>
+            </div>
         </div>
-        <div class="metric" id="metric-2">
-        <h3 id="metric-2-value">80-85% <img src="arrow.png" alt="" style="width: 61px;height: 61px;margin-left: -15px;"></h3>
-        <p id="metric-2-desc"  class="p1">Conversion Rate</p>
-        <p id="metric-2-detail" class="p2">Converted to liquid Carbon Dioxide</p>
-        </div>
-        <div class="metric" id="metric-3">
-        <h3 id="metric-3-value">30% <img src="arrow.png" alt="" style="width: 61px;height: 61px;margin-left: -15px;"></h3>
-        <p id="metric-3-desc" class="p1">Reduction in capital cost</p>
-        <p id="metric-3-detail " class="p2">No installation cost, and much lower regeneration energy requirements</p>
-        </div>
-        </div>
-        </div>
+      
     
     <hr class="gradient5">
     <div class="big">
