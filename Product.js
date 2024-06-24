@@ -51,36 +51,85 @@ function toggleMenu() {
     if (navbarDropdown.style.display === "block") {
         navbarDropdown.style.display = "none";
         menuIcon.innerHTML = "&#9776;";
-        mainContent.style.marginTop = "0"; // Reset margin
+        mainContent.style.marginTop = "0"; 
     } else {
         navbarDropdown.style.display = "block";
         menuIcon.innerHTML = "&#10006;";
-        mainContent.style.marginTop = `${navbarDropdown.clientHeight}px`; // Adjust margin based on dropdown height
+        mainContent.style.marginTop = `${navbarDropdown.clientHeight}px`; 
     }
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const navbarMenu = document.querySelector('.navbar-menu');
-    const underline = document.querySelector('.underline');
-    const navItems = document.querySelectorAll('.navbar-menu ul li a:not(.contact-button)');
+  const navbarMenu = document.querySelector('.navbar-menu');
+  const underline = document.querySelector('.underline');
+  const navItems = document.querySelectorAll('.navbar-menu ul li a:not(.contact-button)');
+  const dropdownMenu = document.querySelector('.navbar-dropdown');
+  const dropdownUnderline = document.querySelector('.underline-dropdown');
+  const dropdownNavItems = document.querySelectorAll('.navbar-dropdown nav ul li a');
 
-    navItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
-            const itemRect = item.getBoundingClientRect();
-            const navbarRect = navbarMenu.getBoundingClientRect();
-            underline.style.width = `${itemRect.width}px`;
-            underline.style.left = `${itemRect.left - navbarRect.left}px`;
-        });
+  const currentPage = window.location.pathname;
 
-        item.addEventListener('mouseleave', function() {
-            underline.style.width = '0';
-        });
+  function setUnderline(item, underlineElement) {
+      const itemRect = item.getBoundingClientRect();
+      const parentRect = item.closest('nav').getBoundingClientRect();
+      underlineElement.style.width = `${itemRect.width}px`;
+      underlineElement.style.left = `${itemRect.left - parentRect.left}px`;
+  }
 
-        item.addEventListener('click', function() {
-            const itemRect = item.getBoundingClientRect();
-            const navbarRect = navbarMenu.getBoundingClientRect();
-            underline.style.width = `${itemRect.width}px`;
-            underline.style.left = `${itemRect.left - navbarRect.left}px`;
-        });
-    });
+  const currentNavItem = Array.from(navItems).find(item => {
+      const itemPath = new URL(item.href).pathname;
+      return itemPath === currentPage;
+  });
+
+  const currentDropdownNavItem = Array.from(dropdownNavItems).find(item => {
+      const itemPath = new URL(item.href).pathname;
+      return itemPath === currentPage;
+  });
+
+  if (currentNavItem) {
+      setUnderline(currentNavItem, underline);
+  }
+
+  navItems.forEach(item => {
+      item.addEventListener('mouseover', function() {
+          setUnderline(item, underline);
+      });
+
+      item.addEventListener('mouseleave', function() {
+          if (currentNavItem) {
+              setUnderline(currentNavItem, underline);
+          } else {
+              underline.style.width = '0';
+          }
+      });
+
+      item.addEventListener('click', function() {
+          setUnderline(item, underline);
+      });
+  });
+
+  function toggleMenu() {
+      dropdownMenu.classList.toggle('active');
+  }
+
+  document.querySelector('.menu-icon').addEventListener('click', toggleMenu);
+
+  dropdownNavItems.forEach(item => {
+      item.addEventListener('click', function() {
+          setUnderline(item, dropdownUnderline);
+          dropdownMenu.classList.remove('active');
+      });
+
+      item.addEventListener('mouseover', function() {
+          setUnderline(item, dropdownUnderline);
+      });
+
+      item.addEventListener('mouseleave', function() {
+          if (currentDropdownNavItem) {
+              setUnderline(currentDropdownNavItem, dropdownUnderline);
+          } else {
+              dropdownUnderline.style.width = '0';
+          }
+      });
+  });
 });
