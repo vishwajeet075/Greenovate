@@ -588,7 +588,7 @@ body {
 
 .title {
   font-weight: 700;
-  font-size: 48px;
+  font-size: 4vw;
   line-height: 1.2;
   margin-bottom: 30px;
 }
@@ -615,6 +615,7 @@ body {
   position: relative;
   border-radius: 15px;
   overflow: hidden;
+  aspect-ratio: 16 / 9; /* This maintains a consistent aspect ratio */
 }
 
 .grid-item img {
@@ -664,7 +665,7 @@ body {
 }
 
 .text p {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
 }
 
@@ -678,6 +679,8 @@ body {
   .description { font-size: 16px; }
   .text h3 { font-size: 20px; }
   .text p { font-size: 14px; }
+
+ 
 }
 
 @media (max-width: 768px) {
@@ -687,13 +690,25 @@ body {
   .large-wide, .medium, .small, .large {
     grid-column: span 1;
   }
+  .grid-item {
+    height: 300px; /* Fixed height for all items on smaller screens */
+    margin-inline: auto;
+  }
 }
 
 @media (max-width: 480px) {
   .image-grid {
     grid-template-columns: 1fr;
+    margin-top: 5%;
   }
+  .grid-item {
+    height: 200px; /* Smaller height for very small screens */
+    margin-inline:auto;
+  }
+
 }
+
+
 
 
 
@@ -814,17 +829,32 @@ body {
 
 @media (max-width: 768px) {
   .features {
-    width: 95%;
+    width: 90%;
     padding: 6vw 4vw; /* Increased padding for mobile */
     margin-bottom: 8vw; /* Increased bottom margin for mobile */
   }
   
   .d {
-    width: 100%;
+    margin-top: 5%;
+    width: 90%;
   }
   
   .b1, .b2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+  }
+  .e{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .c1 , .c2{
+    text-align: left;
+    width: 70%;
   }
 }
 
