@@ -486,7 +486,7 @@ body {
     font-size: 6vw; /* Further adjust font size */
   }
   .quote_btn {
-    font-size: 2vw; /* Further adjust button font size */
+    font-size: 3.5vw; /* Further adjust button font size */
   }
 }
 .container1 {
@@ -692,7 +692,6 @@ body {
   }
   .grid-item {
     height: 300px; /* Fixed height for all items on smaller screens */
-    margin-inline: auto;
   }
 }
 
@@ -703,7 +702,6 @@ body {
   }
   .grid-item {
     height: 200px; /* Smaller height for very small screens */
-    margin-inline:auto;
   }
 
 }
