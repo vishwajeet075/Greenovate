@@ -467,7 +467,7 @@ body {
 @media (max-width: 768px) {
   .box3 {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
   .quote {
     font-size: 7vw; /* Further adjust font size */
@@ -483,10 +483,10 @@ body {
 
 @media (max-width: 480px) {
   .quote {
-    font-size: 8vw; /* Further adjust font size */
+    font-size: 6vw; /* Further adjust font size */
   }
   .quote_btn {
-    font-size: 4vw; /* Further adjust button font size */
+    font-size: 2vw; /* Further adjust button font size */
   }
 }
 .container1 {
