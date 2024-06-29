@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CCUS</title>
+    <link rel="stylesheet" href="learn-ccus.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <img src="Images/logo.jpg" alt="Greenovate Logo" />
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/public/Product.html">Product</a></li>
+                    <li><a href="/public/learn-ccus.html">Learn CCUS</a></li>
+                    <li><a href="/public/Calculator.html">CO2 Calculator</a></li>
+                    <li>
+                        <a href="/public/Contact.html" class="contact-button">
+                             Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <div class="underline"></div>
+            </nav>
+        </div>
+        <div id="navbar-dropdown" class="navbar-dropdown ">
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="/public/Product.html">Product</a></li>
+                    <li><a href="#learn-ccus">Learn CCUS</a></li>
+                    <li><a href="/public/Calculator.html">CO2 Calculator</a></li>
+                    <li>
+                        <a href="/public/Contact.html" class="contact-button1">
+                            <span class="contact-icon">✉️</span> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+
+    <main>
+        <div class="content-wrapper">
+            <div class="content">
+                <div class="left-content">
+                    <h1><b>Learn <span class="gradient-text">Carbon Capture<br>Utilization</span> & <span class="gradient-text">Storage.</span></b></h1>
+                    <div class="gradient-line"></div>
+                    <h3>Greenovate Knowledge Centre</h3>
+                    <p>This section provides valuable information, resources, and insights into the latest advancements and technologies in the field. Explore lectures, articles, research papers, and case studies that explain how CCUS works, its benefits, and its crucial role in combating climate change. Greenovate aims to promote understanding and adoption of effective carbon capture solutions, helping pave the way for a more sustainable future.</p>
+                    <p>By educating industries and individuals, Greenovate aims to promote understanding and adoption of effective carbon capture solutions, helping pave the way for a more sustainable future.</p>
+                </div>
+                <div class="right-content">
+                    <img src="Images/learnccusanimation.gif" alt="Learn CCUS Image">
+                </div>
+            </div>
+        </div>
+
+        <!-- Lectures section -->
+        <div class="lectures-section">
+            <h2>Lectures</h2>
+            <div class="lecture-videos">
+                <div class="video">
+                    <a href="https://youtu.be/iDyI0oHEZuw?si=JMNF_E90dZRJb9yE" target="_blank">
+                        <img src="Images/thumbnail1.jpg" alt="Lecture 1 Thumbnail">
+                        <p>ChangeNOW : Carbon Capture and Utilisation</p>
+                        <h5 id="views">5k Views</h5>
+                    </a>
+                    <button onclick="location.href='https://youtu.be/iDyI0oHEZuw?si=JMNF_E90dZRJb9yE'" id="btn">Watch Now</button>
+                </div>
+                <div class="video">
+                    <a href="https://www.youtube.com/watch?v=VIDEO_ID_2" target="_blank">
+                        <img src="Images/thumnail2.jpg" alt="Lecture 2 Thumbnail">
+                        <p>Young Social Entrepreneur, Singapore : Lecture</p>
+                        <h5 id="views">5k Views</h5>
+                    </a>
+                    <button onclick="location.href='https://www.youtube.com/watch?v=VIDEO_ID_2'" id="btn">Watch Now</button>
+                </div>
+                <!-- Add more videos as needed -->
+            </div>
+        </div>
+        
+        <!-- Circles section 
+        <div class="container">
+            <div class="big-circle">
+                <div class="small-circle"></div>
+            </div>
+        </div>-->
+    
+        <!-- Research section -->
+        <div class="research-section">
+            <div class="research-content">
+                <div class="research-left">
+                    <h2 class="section-title"><span class="blue-text">Research</span> Papers</h2>
+                    <div class="paper-item">
+                        <h3>Innovations in Carbon Utilization</h3>
+                        <p class="author-info">By Raghuveer Verma &nbsp;&bull;&nbsp; 3min read</p>
+                    </div>
+                    <div class="gradient-line"></div>
+                    <div class="paper-item">
+                        <h3>Revolutionizing Industrial Carbon Mitigation</h3>
+                        <p class="author-info">By Ronak Mistry &nbsp;&bull;&nbsp; 2min read</p>
+                    </div>
+                    <div class="gradient-line"></div>
+                    <div class="paper-item">
+                        <h3>Next-Gen CO2 Utilization Techniques</h3>
+                        <p class="author-info">By Jyotsna &nbsp;&bull;&nbsp; 1min read</p>
+                    </div>
+                </div>
+                <div class="research-right">
+                    <img src="Images/Research (4).jpg" alt="Research Illustration">
+                </div>
+            </div>
+        </div>
+
+        <!-- Articles and Blogs section -->
+        <div class="blogs-section">
+            <h3 class="center-headline">Articles and Blogs</h3>
+            <p id="blog">Stay Knowledgeable. Stay updated.</p>
+            <div class="blogs-row">
+                <div class="blogs-image">
+                    <img src="Images/Mask group (1).png" alt="Blogs Image 1">
+                </div>
+                <div class="blogs-text">
+                    <h2 class="blogs-heading">What’s a Carbon Budget?</h2>
+                    <h3 id="blogsby">By Jyotsna Mistry</h3>
+                    <p class="blogs-description">In today's world, environmental consciousness is more important than ever. As individuals, we all play a crucial role in minimizing our carbon footprint to combat climate change and preserve our planet for future generations. Here are some easy steps you can take to reduce your carbon footprint.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- New section with text on the left and image on the right -->
+        <div class="text-image-row">
+            <div class="text-column">
+                <h2 id="text1b">Reduce your Carbon Footprint in </h2>
+                <h2 id="text2b">4 ways - Best Practices</h2>
+                <h3 id="text3b">By Purvi</h3>
+                <p id="textb4">In today's world, environmental consciousness is more important than ever. As individuals, we all play a crucial role in minimizing our carbon footprint to combat climate change and preserve our planet for future generations. Here are some easy steps you can take to reduce your carbon footprint.</p>
+            </div>
+            <div class="image-column">
+                <img src="Images/Still life sustainable lifestyle elements composition.png" alt="Carbon Solutions">
+            </div>
+        </div>
+
+        <!-- New section with box, centered text, and button -->
+        <div class="box-section">
+            <div class="box">
+                <h2>Get updates from Greenovate <br>Knowledge Centre</h2>
+                <p>Bring inspiration to your inbox with news , case studies about how<br>CCU’S are rapidly becoming the future. </p>
+                <button onclick="location.href='join.html'">Regsiter Now</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+    <script>
+        function toggleMenu() {
+    var navbarDropdown = document.getElementById("navbar-dropdown");
+    var menuIcon = document.querySelector(".menu-icon");
+    
+    if (navbarDropdown.style.display === "block") {
+        navbarDropdown.style.display = "none";
+        menuIcon.innerHTML = "&#9776;";
+    } else {
+        navbarDropdown.style.display = "block";
+        menuIcon.innerHTML = "&#10006;";
+    }
+}
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const navbarMenu = document.querySelector('.navbar-menu');
+    const underline = document.querySelector('.underline');
+    const navItems = document.querySelectorAll('.navbar-menu ul li a:not(.contact-button)');
+    const dropdownMenu = document.querySelector('.navbar-dropdown');
+    const dropdownUnderline = document.querySelector('.underline-dropdown');
+    const dropdownNavItems = document.querySelectorAll('.navbar-dropdown nav ul li a');
+
+    const currentPage = window.location.pathname.split('/').pop();
+
+    function setUnderline(item, underlineElement) {
+        const itemRect = item.getBoundingClientRect();
+        const parentRect = item.closest('nav').getBoundingClientRect();
+        underlineElement.style.width = `${itemRect.width}px`;
+        underlineElement.style.left = `${itemRect.left - parentRect.left}px`;
+    }
+
+    const currentNavItem = Array.from(navItems).find(item => {
+        const itemPath = item.getAttribute('href').split('/').pop();
+        return itemPath === currentPage || (currentPage === '' && itemPath === '#about');
+    });
+
+    const currentDropdownNavItem = Array.from(dropdownNavItems).find(item => {
+        const itemPath = item.getAttribute('href').split('/').pop();
+        return itemPath === currentPage || (currentPage === '' && itemPath === '#about');
+    });
+
+    if (currentNavItem) {
+        setUnderline(currentNavItem, underline);
+    } else if (currentDropdownNavItem) {
+        setUnderline(currentDropdownNavItem, dropdownUnderline);
+    }
+  navItems.forEach(item => {
+      item.addEventListener('mouseover', function() {
+          setUnderline(item, underline);
+      });
+
+      item.addEventListener('mouseleave', function() {
+          if (currentNavItem) {
+              setUnderline(currentNavItem, underline);
+          } else {
+              underline.style.width = '0';
+          }
+      });
+
+      item.addEventListener('click', function() {
+          setUnderline(item, underline);
+      });
+  });
+
+});
+
+    </script>
+</body>
+</html>
