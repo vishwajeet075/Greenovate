@@ -580,7 +580,7 @@ body {
 
 @media (max-width: 480px) {
   .quote {
-    font-size: 4vw; /* Further adjust font size */
+    font-size: 6vw; /* Further adjust font size */
   }
   .quote_btn {
     font-size: 2.2vw; /* Further adjust button font size */
