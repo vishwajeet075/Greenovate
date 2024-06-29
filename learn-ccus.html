@@ -15,13 +15,16 @@
             <div class="navbar-brand">
                 <img src="logo.jpg" alt="Greenovate Logo" />
             </div>
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+            </div>
             <nav class="navbar-menu">
                 <ul>
                     <li><a href="#about">About</a></li>
-                    <li><a href="Product.html">Product</a></li>
-                    <li><a href="learn-ccus.html">Learn CCUS</a></li>
-                    <li><a href="Calculator.html">CO2 Calculator</a></li>
+                    <li><a href="/public/Product.html">Product</a></li>
+                    <li><a href="/public/learn-ccus.html">Learn CCUS</a></li>
+                    <li><a href="/public/Calculator.html">CO2 Calculator</a></li>
                     <li>
                         <a href="/public/Contact.html" class="contact-button">
                              Contact Us
@@ -165,16 +168,16 @@
         <!-- Footer content goes here -->
     </footer>
     <script>
-        function toggleMenu() {
+function toggleMenu() {
     var navbarDropdown = document.getElementById("navbar-dropdown");
     var menuIcon = document.querySelector(".menu-icon");
     
+    menuIcon.classList.toggle("open");
+    
     if (navbarDropdown.style.display === "block") {
         navbarDropdown.style.display = "none";
-        menuIcon.innerHTML = "&#9776;";
     } else {
         navbarDropdown.style.display = "block";
-        menuIcon.innerHTML = "&#10006;";
     }
 }
 
