@@ -2,19 +2,19 @@ document.addEventListener("DOMContentLoaded", function() {
     const buttons = document.querySelectorAll(".custom-button");
     const metrics = {
         industry: {
-            metric1: { value: "85-90%", desc: "Capture Efficiency", detail: "Tube CC's capture efficiency directly from the emission streams", arrow: "arrow.png" },
-            metric2: { value: "80-85%", desc: "Conversion Rate", detail: "Converted to liquid Carbon Dioxide", arrow: "arrow.png" },
-            metric3: { value: "30%", desc: "Reduction in capital cost", detail: "No installation cost, and much lower regeneration energy requirements", arrow: "arrow_down.png" }
+            metric1: { value: "85-90%", desc: "Capture Efficiency", detail: "Tube CC's capture efficiency directly from the emission streams", arrow: "Images/arrow.png" },
+            metric2: { value: "80-85%", desc: "Conversion Rate", detail: "Converted to liquid Carbon Dioxide", arrow: "Images/arrow.png" },
+            metric3: { value: "30%", desc: "Reduction in capital cost", detail: "No installation cost, and much lower regeneration energy requirements", arrow: "Images/arrow_down.png" }
         },
         people: {
-            metric1: { value: "95%", desc: "Air Quality Improvement", detail: "Significant reduction in workplace air pollution ensuring healthier breathing environments for workers.", arrow: "arrow.png" },
-            metric2: { value: "70%", desc: "Health Risk Reduction", detail: "Decreases exposure to harmful emissions, reducing health risks for employees.", arrow: "arrow_down.png" },
-            metric3: { value: "50%", desc: "Increased Productivity", detail: "Healthier air leads to better overall employee well-being and enhanced productivity.", arrow: "arrow.png" }
+            metric1: { value: "95%", desc: "Air Quality Improvement", detail: "Significant reduction in workplace air pollution ensuring healthier breathing environments for workers.", arrow: "Images/arrow.png" },
+            metric2: { value: "70%", desc: "Health Risk Reduction", detail: "Decreases exposure to harmful emissions, reducing health risks for employees.", arrow: "Images/arrow_down.png" },
+            metric3: { value: "50%", desc: "Increased Productivity", detail: "Healthier air leads to better overall employee well-being and enhanced productivity.", arrow: "Images/arrow.png" }
         },
         planet: {
-            metric1: { value: "60%", desc: "Reduction in Greenhouse Gases", detail: "Effective carbon capture significantly lowers overall greenhouse gas emissions.", arrow: "arrow_down.png" },
-            metric2: { value: "80%", desc: "Resource Efficiency", detail: "Optimize the use of natural resources by repurposing captured carbon.", arrow: "arrow.png" },
-            metric3: { value: "90%", desc: "Sustainable impact", detail: "Contributes to long-term environmental sustainability and combats climate change.", arrow: "arrow.png" }
+            metric1: { value: "60%", desc: "Reduction in Greenhouse Gases", detail: "Effective carbon capture significantly lowers overall greenhouse gas emissions.", arrow: "Images/arrow_down.png" },
+            metric2: { value: "80%", desc: "Resource Efficiency", detail: "Optimize the use of natural resources by repurposing captured carbon.", arrow: "Images/arrow.png" },
+            metric3: { value: "90%", desc: "Sustainable impact", detail: "Contributes to long-term environmental sustainability and combats climate change.", arrow: "Images/arrow.png" }
         }
     };
 
@@ -48,16 +48,14 @@ function toggleMenu() {
     var navbarDropdown = document.getElementById("navbar-dropdown");
     var menuIcon = document.querySelector(".menu-icon");
     
+    menuIcon.classList.toggle("open");
+    
     if (navbarDropdown.style.display === "block") {
         navbarDropdown.style.display = "none";
-        menuIcon.innerHTML = "&#9776;";
     } else {
         navbarDropdown.style.display = "block";
-        menuIcon.innerHTML = "&#10006;";
     }
 }
-
-
 
 
 
