@@ -1,0 +1,457 @@
+body {
+    width: 1500px;
+    font-family: "Manrope", sans-serif;
+    overscroll-behavior: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+  }
+  
+  .navbar-container {
+    width: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    z-index: 300;
+  }
+  
+  
+  .navbar {
+    background-color: #fff;
+    box-shadow: 5px 5px 45px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    padding-right: 20px;
+    margin: 0 auto;
+    width: 90%;
+    position: absolute;
+    top: 20px;
+    z-index: 200;
+  }
+  
+  .navbar-brand img {
+    height: 25px;
+  }
+  
+  .navbar-menu {
+    position: relative;
+  }
+  
+  .navbar-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-menu ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu ul li a {
+    text-decoration: none;
+    color: #1e572c;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu .underline {
+    position: absolute;
+    bottom: 3px;
+    height: 2px;
+    background: linear-gradient(to right, #222826, #066DB7, #61C977);
+    width: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-menu ul li a.contact-button {
+    border-radius: 30px;
+    background-color: #28a745;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-menu ul li a.contact-button:hover {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .navbar-dropdown {
+    display: none;
+    position: fixed;
+    top: 50px; /* Adjust this value to match the height of your navbar */
+    left: 0;
+    width: 100vw; /* Use viewport width */
+    height: auto; /* Let it grow based on content */
+    max-height: calc(100vh - 50px); /* Subtract navbar height from viewport height */
+    background-color: #fff;
+    overflow-y: auto; /* Add scrolling if content is too long */
+    z-index: 49; /* Just below the navbar */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-dropdown.active {
+    display: block;
+    
+  }
+  
+  
+  
+  .navbar-container .navbar {
+    position: relative;
+  }
+  
+  .navbar-dropdown nav ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .navbar-dropdown nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .navbar-dropdown nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #1e572c;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+  }
+  
+  .navbar-dropdown nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px; /* Adjust this value to position the line below the text */
+    left: 0;
+    background: linear-gradient(to right, #222826, #066DB7, #61C977);
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-dropdown nav ul li a:hover {
+    color: darkgreen;
+  }
+  
+  .navbar-dropdown nav ul li a:hover::after {
+    width: 120px;
+  }
+  
+  
+  
+  
+  
+  
+  .contact-button1 {
+    margin-inline:auto;
+    border-radius: 10px;
+    background-color: lightgreen;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #1e572c;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .menu-icon span:nth-child(1) {
+    top: 25%;
+  }
+  
+  .menu-icon span:nth-child(2) {
+    top: 75%;
+  }
+  
+  .menu-icon.open span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  
+  .menu-icon.open span:nth-child(2) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  
+  
+    
+  
+  
+  @media (max-width:1080px){
+  
+  
+    .header img{
+      width: 100%;
+      min-height: 100%;
+    }
+    
+    .navbar-container{
+      width: 100%;
+     
+    }
+    .navbar {
+      width: 100%;
+      padding: 10px 40px;
+      margin-left: 0;
+      position: fixed;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      overflow-x: hidden;
+      border-radius: 0;
+    }
+    
+    .navbar-dropdown {
+      top: 50px; 
+    }
+    
+    .menu-icon {
+        display: block;
+        
+    }
+    
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+    }
+    }
+  
+  
+
+    .get-in-touch {
+      background-color: #ffffff;
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .background-design {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      z-index: 1; /* Lower than navbar-container */
+    }
+    
+    .background-design.left {
+      left: 0;
+      background: url("Images/wave1.png");
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: contain;
+    }
+    
+    .background-design.right {
+      right: 0;
+      background: url("Images/wave2.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+    }
+    
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+.get-in-touch h2 {
+  font-size: 3.5vw;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.get-in-touch p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: 400;
+}
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid 
+  #5FA470;
+  background-color:#FCF7F4 ;
+  border-radius: 15px;
+  font-size: 16px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row input {
+  flex: 1;
+}
+
+#contact-form textarea {
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 45px;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #1e572c;
+}
+
+@media (max-width: 768px) {
+   .get-in-touch {
+    padding: 60px 0;
+  }
+
+  .background-design {
+    width: 100%;
+    height: 50%;
+  }
+
+  .background-design.left {
+    top: 0;
+    background-position: left top;
+    background-size: 100% auto;
+  }
+
+  .background-design.right {
+    top: 50%;
+    background-position: right bottom;
+    background-size: 100% auto;
+  }
+}
+
+
+.office-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background-color: #FCF7F4;
+  border-radius: 16px;
+  margin-top: 0;
+}
+
+.info {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 20px;
+}
+
+.info h2 {
+  font-size: clamp(24px, 4vw, 32px);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.info p {
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 500;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.map {
+  flex: 1;
+  max-width: 40%;
+}
+
+.map img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+@media (max-width: 480px) {
+  .office-info {
+      flex-direction: column;
+      padding: 20px;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .info, .map {
+      max-width: 100%;
+  }
+
+  .info {
+      padding-right: 0;
+      margin-bottom: 20px;
+  }
+}
+
+
+
+  
+
+ 
+ 
+  
+
+
+
+
+
+
+
