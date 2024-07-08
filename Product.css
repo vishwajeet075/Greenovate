@@ -271,14 +271,14 @@ body {
 }
 
 .header img {
-  width: 50%;
+  width: 70%;
   object-fit: contain;
   margin-top: 5%;
   min-width: 300px; 
 }
 
 .content {
-  width: 45%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -580,10 +580,10 @@ body {
 
 @media (max-width: 480px) {
   .quote {
-    font-size: 6vw; /* Further adjust font size */
+    font-size: 4vw; /* Further adjust font size */
   }
   .quote_btn {
-    font-size: 2.2vw; /* Further adjust button font size */
+    font-size: 1.2vw; /* Further adjust button font size */
   }
 }
 .container1 {
@@ -715,9 +715,6 @@ body {
   margin-left: 0;
 }
 
-#new{
-  display: none;
-}
 
 .grid-item {
   position: relative;
@@ -811,17 +808,21 @@ body {
   .grid-item {
     height: 200px; /* Smaller height for very small screens */
   }
- .text{
-  display: none;
- }
- #original{
-  display: none;
-}
-#new {
-  display: block;
-}
-
-
+  .text {
+    bottom: -10px;
+    left: 5%;
+  }
+  
+  .text h3 {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: -10px;
+  }
+  
+  .text p {
+    font-weight: 700;
+    font-size: 18px;
+  }
 }
 
 
@@ -932,7 +933,7 @@ body {
 .c1, .c2 {
   text-align: left;
   font-weight: 400;
-  font-size: clamp(16px, 1.2vw, 22px);
+  font-size: clamp(16px, 1.5vw, 22px);
   line-height: 1.4;
   color: black;
 }
@@ -1167,7 +1168,7 @@ body {
 
 
 .calculator {
-  max-width: 100%;
+  max-width: 70%;
   min-height: 400px;
   display: flex;
   flex-direction: column;
@@ -1177,6 +1178,7 @@ body {
   background-color: #daf8e0;
   margin-top: 60px;
   margin-bottom: 100px;
+  margin-inline: auto;
   padding: 40px 20px;
   box-sizing: border-box;
 }
@@ -1208,7 +1210,10 @@ body {
   font-size: clamp(18px, 2.5vw, 22px);
   line-height: 1.4;
   color: #151515;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  background: linear-gradient(to right , #222826,#066DB7,#61C977);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .btnbox {
@@ -1216,15 +1221,14 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 20px;
   width: 100%;
   max-width: 570px; /* Accommodate two buttons side by side */
 }
 
-.calculate, .works {
+.calculate {
   font-family: "Inter", sans-serif;
   font-weight: 650;
-  font-size: clamp(16px, 2vw, 18px);
+  font-size: clamp(18px, 2vw, 18px);
   line-height: 1.4;
   width: 270px;
   max-width: calc(50% - 10px); /* Adjust based on the gap */
@@ -1239,16 +1243,17 @@ body {
 }
 
 .calculate {
-  background-color: #61c977;
+  background-color:#61C977;
   border: 1px solid #61c977;
-  color: white;
+  color:white;
 }
 
-.works {
-  border: 2px solid #61c977;
-  background-color: #f1f1f1;
-  color: black;
+
+#report{
+  margin-top: 2vw;
+  width: 70%;
 }
+
 
 @media (max-width: 768px) {
   .calculator {
@@ -1261,10 +1266,14 @@ body {
     max-width: 100%;
   }
 
-  .calculate, .works {
+  .calculate {
     width: 100%;
     max-width: 270px;
     min-width: unset; /* Allow buttons to shrink if needed */
+  }
+  #report{
+    margin-top: 4vh;
+    width: 100%;
   }
 }
 
@@ -1281,12 +1290,171 @@ body {
     font-size: 28px;
   }
 
-  .calculate, .works {
-    font-size: 16px; /* Slightly smaller font for very small screens */
+  .calculate {
+    font-size: 12px; /* Slightly smaller font for very small screens */
     height: 50px; /* Slightly reduce height for better proportions */
   }
 }
 
+
+
+
+
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.3s, opacity 0.3s;
+}
+
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-form {
+  background-color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.popup-header img {
+  height: 30px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup-form h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.popup-form p {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #666;
+}
+
+.popup-form input,
+.popup-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: #F7F5F2;
+  color: #1E572C;
+}
+
+.popup-form textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: #000;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #333;
+}
+
+/* Media Queries */
+@media (max-width: 480px) {
+  .popup-form {
+    padding: 20px;
+    width: 95%;
+  }
+
+  .popup-form input,
+  .popup-form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .popup-form h2 {
+    font-size: 20px;
+  }
+
+  .popup-form p {
+    font-size: 12px;
+  }
+
+  .submit-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup-form {
+    padding: 25px;
+    width: 90%;
+  }
+
+  .popup-form input,
+  .popup-form textarea {
+    padding: 11px;
+    margin-bottom: 11px;
+    font-size: 13px;
+  }
+
+  .popup-form h2 {
+    font-size: 22px;
+  }
+
+  .popup-form p {
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    padding: 11px 18px;
+    font-size: 15px;
+  }
+}
 .government {
   width: 100%;
   font-weight: 700;
