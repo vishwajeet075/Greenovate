@@ -111,3 +111,55 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const openPopupBtn = document.getElementById('open');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popupOverlay = document.getElementById('popupOverlay');
+  
+    openPopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.add('active');
+    });
+  
+    closePopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.remove('active');
+    });
+  
+    window.addEventListener('click', (event) => {
+      if (event.target === popupOverlay) {
+        popupOverlay.classList.remove('active');
+      }
+    });
+  });
+  
+  
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+  
+    const formData = {
+      name: this.name.value,
+      contact: this.contact.value,
+      email: this.email.value,
+      industry: this.industry.value,
+      position: this.position.value,
+      comment: this.comment.value
+    };
+  
+    fetch('/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('popupOverlay').style.display = 'none';
+        alert('Form submitted successfully!');
+        this.reset(); 
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    });
+  });
