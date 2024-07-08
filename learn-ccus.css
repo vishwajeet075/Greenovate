@@ -262,6 +262,8 @@ body {
     }
 
 
+
+
 .content-wrapper {
     display: flex;
     justify-content: center;
@@ -554,9 +556,7 @@ body {
     margin: 20px 0;
 }
 
-.research-right {
-    width: 35%;
-}
+
 
 .research-right img {
     max-width: 100%;
@@ -584,6 +584,9 @@ body {
     .paper-item{
         text-align: center;
     }
+    .gradient-line{
+        margin-inline: auto;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -605,37 +608,43 @@ body {
 
 
 .blogs-section {
-    padding: 40px 5%;
-    background-color: white;
-    max-width: 1200px;
+    padding: 60px 5%;
+    background-color: white; /* Light blue background */
+    max-width: 100%;
     margin: 0 auto;
 }
 
 .center-headline {
     font-size: clamp(32px, 5vw, 48px);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
     text-align: center;
+    color: #333;
 }
 
 #blog {
     text-align: center;
     font-size: clamp(14px, 2vw, 16px);
-    margin-bottom: 30px;
+    margin-bottom: 40px;
+    color: #666;
 }
 
 .blogs-row {
     display: flex;
     align-items: center;
-    padding: 30px 5%;
-    margin: 20px 0;
+    padding: 30px;
+    margin: 20px auto;
     background-color: #F7F5F2;
-    border-radius: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    max-width: 1000px;
+    gap: 4vw;
 }
 
 .blogs-image {
     flex: 1;
     max-width: 40%;
+    margin-right: 30px;
 }
 
 .blogs-image img {
@@ -646,14 +655,13 @@ body {
 
 .blogs-text {
     flex: 2;
-    padding-left: 5%;
 }
 
 .blogs-heading {
     font-size: clamp(24px, 4vw, 32px);
-    font-family: 'Poppins', sans-serif;
     font-weight: 600;
     margin-bottom: 10px;
+    color: #333;
 }
 
 #blogsby {
@@ -663,46 +671,66 @@ body {
 }
 
 .blogs-description {
-    font-size: clamp(14px, 2vw, 15px);
-    font-family: 'Poppins', sans-serif;
+    font-size: clamp(14px, 2vw, 16px);
     line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.read-more {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.read-more:hover {
+    background-color: #333;
+}
+
+.second{
+    background-color: #C4F0D0;
 }
 
 @media screen and (max-width: 768px) {
     .blogs-row {
         flex-direction: column;
-        padding: 20px 5%;
+        padding: 20px;
     }
 
     .blogs-image {
         max-width: 100%;
+        margin-right: 0;
         margin-bottom: 20px;
     }
 
     .blogs-text {
-        padding-left: 0;
+        text-align: center;
     }
 }
 
 @media screen and (max-width: 480px) {
     .blogs-section {
-        padding: 30px 4%;
+        padding: 40px 4%;
     }
 
     .blogs-row {
-        padding: 15px 4%;
-        border-radius: 20px;
+        padding: 15px;
+        border-radius: 15px;
     }
 
     .center-headline {
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
     #blog {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 }
-
 
 
 /* Example styles for Learn CCUS page */
@@ -727,7 +755,6 @@ body {
 #text1b, #text2b {
     font-weight: 600;
     font-size: clamp(24px, 4vw, 32px);
-    margin-bottom: 10px;
     line-height: 1.2;
 }
 
@@ -738,9 +765,14 @@ body {
 }
 
 #textb4 {
-    font-weight: 400;
-    font-size: clamp(14px, 2vw, 18px);
+    font-size: clamp(14px, 2vw, 16px);
     line-height: 1.6;
+}
+
+.gradient1{
+    height: 2px;
+    width: 90%;
+    background: linear-gradient(to right , #000000,#066DB7,#61C977);
 }
 
 .image-column {
