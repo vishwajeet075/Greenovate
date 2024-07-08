@@ -20,7 +20,7 @@
   </head>
   <body>
 
-      <header class="navbar-container">
+    <header class="navbar-container">
       <div class="navbar">
           <div class="navbar-brand">
               <img src="logo.jpg" alt="Greenovate Logo" />
@@ -32,11 +32,11 @@
           <nav class="navbar-menu">
               <ul>
                   <li><a href="#about">About</a></li>
-                  <li><a href="Product.html">Product</a></li>
-                  <li><a href="learn-ccus.html">Learn CCUS</a></li>
-                  <li><a href="Calculator.html">CO2 Calculator</a></li>
+                  <li><a href="/public/Product.html">Product</a></li>
+                  <li><a href="/public/learn-ccus.html">Learn CCUS</a></li>
+                  <li><a href="/public/Calculator.html">CO2 Calculator</a></li>
                   <li>
-                      <a href="Contact.html" class="contact-button">
+                      <a href="/public/Contact.html" class="contact-button">
                            Contact Us
                       </a>
                   </li>
@@ -48,11 +48,11 @@
           <nav>
               <ul>
                   <li><a href="#about">About</a></li>
-                  <li><a href="Product.html">Product</a></li>
-                  <li><a href="learn-ccus.html">Learn CCUS</a></li>
-                  <li><a href="Calculator.html">CO2 Calculator</a></li>
+                  <li><a href="/public/Product.html">Product</a></li>
+                  <li><a href="#learn-ccus">Learn CCUS</a></li>
+                  <li><a href="/public/Calculator.html">CO2 Calculator</a></li>
                   <li>
-                      <a href="Contact.html" class="contact-button1">
+                      <a href="/public/Contact.html" class="contact-button1">
                           <span class="contact-icon">✉️</span> Contact Us
                       </a>
                   </li>
@@ -65,7 +65,7 @@
     
 
     <div class="header " data-aos="fade-down">
-      <img src="image 85.png" alt="This is the product" />
+      <img src="Images/image 85.png" alt="This is the product" />
       <div class="content">
         <div class="heading">Tube CC</div>
         <hr class="gradient" />
@@ -149,14 +149,14 @@
       </div>
     </div>
     <div class="grid-item small">
-      <img src="product-2.png" alt="Plug & play" />
+      <img src="product-2.png" alt="Plug & play"  id="original"/>
       <div class="overlay"></div>
       <div class="text">
-        <h3>Plug & play</h3>
+        <h3 style="font-size: 32px; margin-bottom: 10px; margin-left:30px;">Plug & play</h3>
       </div>
     </div>
     <div class="grid-item medium">
-      <img src="product - 3.png" alt="Easily portable" />
+      <img src="Images/product - 3.png" alt="Easily portable" />
       <div class="overlay"></div>
       <div class="text">
         <h3>Easily portable</h3>
@@ -218,7 +218,7 @@
           <div class="b2 th">
             <img
               src="f3.png"
-              alt="This is an icon"
+              alt="This is an icon" style="margin-bottom: 1.5px;"
             />
             <div class="c2 ">
               The <span class="span1">intuitive interface</span> makes it easy
@@ -302,12 +302,33 @@
           In-depth report in a few clicks.
         </div>
         <div class="carbon">Greenovate's Carbon Calculator</div>
-        <div class="step">Take The First Step with Our Carbon Calculator</div>
-        <div class="btnbox">
-          <button class="calculate">Calculate Now</button>
-          <button class="works">How it works?</button>
+        <div class="step">LAUNCING SOON</div>
+        <button class="calculate" id="open">KNOW MORE</button>
+          <img src="report.jpg" alt="Report Carbon emmisions" id="report">
+          
+      </div>
+
+
+      <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-form">
+          <div class="popup-header">
+            <img src="logo.jpg" alt="Greenovate Logo">
+            <button class="close-btn" id="closePopupBtn">&times;</button>
+          </div>
+          <h2>Carbon Calculator</h2>
+          <p>Be the first to know when our carbon calculator launches! Register now.</p>
+          <form id="registerForm">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="tel" name="contact" placeholder="Contact No." required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="industry" placeholder="Industry Name" required>
+            <input type="text" name="position" placeholder="Position" required>
+            <textarea name="comment" placeholder="Comment"></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
         </div>
       </div>
+    
   
 
     <div class="government">Initiatives By Govt. of India</div>
@@ -328,6 +349,68 @@
           class="promise-img"
         />
       </div>
+
+    <!--  <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="logo.jpg" alt="Greenovate">
+          </div>
+          <div class="footer-links">
+            <div class="footer-column">
+              <h3>Company</h3>
+              <ul>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">Our Journey</a></li>
+                <li><a href="#">Achievements</a></li>
+                <li><a href="#">Partners</a></li>
+                <li><a href="#">News</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Product</h3>
+              <ul>
+                <li><a href="#">Overview</a></li>
+                <li><a href="#">Tube CC</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Metrics</a></li>
+                <li><a href="#">Testimonial</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Learn CCUS</h3>
+              <ul>
+                <li><a href="#">Lectures</a></li>
+                <li><a href="#">Articles & Blogs</a></li>
+                <li><a href="#">Research Paper</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Calculator</h3>
+              <ul>
+                <li><a href="#">Calculate emissions</a></li>
+              </ul>
+              <h3>Careers</h3>
+              <ul>
+                <li><a href="#">Jobs openings</a></li>
+                <li><a href="#">Life at Greenovate</a></li>
+              </ul>
+            </div>
+            <div class="footer-column">
+              <h3>Terms</h3>
+              <ul>
+                <li><a href="#">Terms of use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Guidelines</a></li>
+                <li><a href="#">Our Policies</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Greenovate Solutions. All rights Reserved.</p>
+        </div>
+      </footer>-->
     
   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
