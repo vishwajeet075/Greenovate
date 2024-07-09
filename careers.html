@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers</title>
+    <link rel="stylesheet" href="careers.css">
+    <link rel="stylesheet" href="media-queriesCAREER.css">
+    <script src="career.js"></script>
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header class="navbar-container">
+        <div class="navbar">
+            <div class="navbar-brand">
+                <a href="index.html"><img src="logo[1].jpg" alt="Greenovate Logo" /> </a> 
+
+            </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+            </div>
+            <nav class="navbar-menu">
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="learn-ccus.html">Learn CCUS</a></li>
+                    <li><a href="Calculator.html">CO2 Calculator</a></li>
+                    <li>
+                        <a href="Contact.html" class="contact-button">
+                             Contact Us
+                        </a>
+                    </li>
+                </ul>
+                <div class="underline"></div>
+            </nav>
+        </div>
+        <div id="navbar-dropdown" class="navbar-dropdown ">
+            <nav>
+                <ul>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="Product.html">Product</a></li>
+                    <li><a href="learn-ccus.html">Learn CCUS</a></li>
+                    <li><a href="Calculator.html">CO2 Calculator</a></li>
+                    <li>
+                        <a href="Contact.html" class="contact-button1">
+                            <span class="contact-icon">✉</span> Contact Us
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="careers-intro">
+            <div class="headline">
+                <h1><span class="gradient-text">Clearer Skies</span> and a <br> Bright Future.</h1>
+                <div class="gradient-line"></div>
+                <p><b>Be a part of our team today.</b></p>
+            </div>
+            <div class="headline-image">
+                <img src="clouds 1[1].png" alt="Careers at Greenovate">
+            </div>
+        </section>
+        <img src="circles 1[1].png" alt="Circle1" id="circle1">
+
+
+
+        <section class="careers-info">
+            <h2>Careers at Greenovate</h2>
+            <div class="clouds2image">
+                <img src="clouds 2[1].png" alt="Careers at Greenovate">
+
+            </div>
+
+            
+            <div class="info-row">
+                <div class="info-box1">
+                    <h3>Research Intern</h3>
+                    <h4>Selected intern's day-to-day responsibilities include:</h4>
+                    <ol>
+                        <li>Conduct secondary research through papers, books, patents, and articles on the given topic</li>
+                        <li>Conduct primary research through expert interaction on the given topic</li>
+                        <li>Work on documentation</li>
+                    </ol>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            <img src="Greenhalfcircle.png" alt="Circle1" id="circle2">
+
+            <div class="info-row">
+                <div class="info-box2">
+                    <h3>Process Engineer</h3>
+                    <h4>Selected intern's day-to-day responsibilities include:</h4>
+                    <ol>
+                        <li>Working on modelling & simulation of a process design</li>
+                        <li>Creating & running iterations of chemical engineering processes</li>
+                        <li>Conducting process calculations, material & energy balance</li>
+                        <li>Sizing of equipments</li>
+                        <li>Working on process standards</li>
+                        <li>Creating PFD's & P&ID's</li>
+                    </ol>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="info-row">
+                <div class="info-box3">
+                    <h3>Digital Content Development</h3>
+                    <h4>Vacancy:1</h4>
+                    <p>Selected intern's day-to-day responsibilities include:1. Managing and developing social media accounts (graphic designing, video editing, social media postings, etc.)2. Creating videos and short content for marketing</p>
+                    
+                    <h4>Skills:</h4>
+                    <ul>
+                        <li>Adobe Photoshop</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Adobe Premiere Pro or any video editing software</li>
+                    </ul>
+                    <a href="#" class="apply-button">Apply Now</a>
+                </div>
+            </div>
+            <img src="greenfull.png" alt="Greenovate Solutions Pvt Ltd" id="greenfull">
+
+        </section>
+        <div id="applicationPopup" class="popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <img src="logo[1].jpg" alt="Greenovate Logo" class="logo">
+                    <span class="close">&times;</span>
+                </div>
+                <h2>Job Application</h2>
+                <form id="applicationForm">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="role" placeholder="Role Applying for" required>
+                    <input type="text" name="qualification" placeholder="Qualification" required>
+                    <div class="form-row">
+                        <input type="text" name="location" placeholder="Location" required>
+                        <div class="file-upload">
+                            <label for="cv">Upload CV  &ThinSpace; &MediumSpace; &MediumSpace; v</label>
+                            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                        </div>
+                    </div>
+                    <textarea name="coverLetter" placeholder="Cover Letter" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <img src="CIRCLES_3[1].png" alt="Careers at Greenovate" id="half">
+
+        <section class="office-info">
+            <div class="info-row">
+                <div class="office-info-text">
+                    <h3>Our Offices</h3>
+                    
+                    <address>
+                        Bhau Institute of Innovation, Entrepreneurship and Leadership.
+Beside COEP Boat Club, College of Engineering, Shivajinagar, Pune, Maharashtra 411005
+                    </address>
+                    <address>
+                        100,NCL Innovation park, <br>Dr. Homi Bhabha Road,Pune - 411008, India.
+                    </address>
+                </div>
+                <div class="office-info-map">
+                    <a href="https://www.google.com/maps?q=Bhau+Institute+of+Innovation,+Entrepreneurship+and+Leadership,+Beside+COEP+Boat+Club,+College+of+Engineering,+Shivajinagar,+Pune,+Maharashtra+411005" target="_blank">
+                        <img src="greenovatemap.jpg" alt="Map of our office">
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <!-- Footer content goes here -->
+        
+        <div class="footer-content">
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About us</a></li>
+                        <li><a href="careers.html">Mission</a></li>
+                        <li><a href="careers.html">Our Journey</a></li>
+                        <li><a href="careers.html">Achievements</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="separator"></div>
+    
+                <div class="link-column">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="index.html">Overview</a></li>
+                        <li><a href="Product.html">Tube CC</a></li>
+                        <li><a href="Product.html">Features</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="separator"></div>
+    
+                <div class="link-column">
+                    <h4>Learn CCUS</h4>
+                    <ul>
+                        <li><a href="learn-ccus.html">Lectures</a></li>
+                        <li><a href="learn-ccus.html">Articles & Blogs</a></li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+    
+                <div class="link-column">
+                    <h4>Careers</h4>
+                    <ul>
+                        <li><a href="careers.html">Job openings</a></li>
+                    </ul>
+                </div>
+                <div class="separator"></div>
+    
+                <div class="link-column">
+                    <h4>Terms</h4>
+                    <ul>
+                        <li><a href="#">Terms of use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Guidelines</a></li>
+                        <li><a href="#">Our Policies</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-brand">
+                <img src="logo[1].jpg" alt="Greenovate Solutions Pvt Ltd">
+                <div class="social-icons">
+                    <a href="#"><img src="Vector (1).png" alt="Twitter"></a>
+                    <a href="https://www.instagram.com/greenovate_solutions?igsh=ZGxqa21wcm42amlo"><img src="Social Icons (1).png" alt="Instagram"></a>
+                    <a href="https://www.linkedin.com/company/greenovate-solutions-pvt-ltd/"><img src="Vector.png" alt="LinkedIn"></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Greenovate Solutions. All rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        const applyButtons = document.querySelectorAll('.apply-button');
+        const popup = document.getElementById('applicationPopup');
+        const closeBtn = document.querySelector('.close');
+        const form = document.getElementById('applicationForm');
+        
+        applyButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                popup.style.display = 'block';
+                const role = e.target.closest('.info-box1, .info-box2, .info-box3').querySelector('h3').textContent;
+                document.querySelector('input[name="role"]').value = role;
+            });
+        });
+        
+        closeBtn.onclick = () => popup.style.display = 'none';
+        
+        window.onclick = (event) => {
+            if (event.target == popup) {
+                popup.style.display = 'none';
+            }
+        };
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            
+            try {
+                const response = await fetch('/submit-application', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                if (response.ok) {
+                    alert('Application submitted successfully!');
+                    popup.style.display = 'none';
+                    form.reset();
+                } else {
+                    alert('There was an error submitting your application. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error submitting your application. Please try again.');
+            }
+        });
+        </script>
+</body>
+</html>
