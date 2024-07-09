@@ -112,7 +112,8 @@
     }
 @media screen and (max-width: 1200px) {
     .careers-intro {
-        margin-left: 5%;
+         margin-left: 10%;
+        text-align: left;
     }
     
     .headline h1 {
@@ -157,6 +158,8 @@
     .careers-intro {
         flex-direction: column;
         align-items: flex-start;
+         margin-left: 10%;
+        text-align: left;
     }
     
     .headline {
@@ -242,7 +245,10 @@
 @media screen and (max-width: 768px) {
     .careers-intro {
         padding: 30px;
-        margin-left: 0;
+        margin-left: 10%;
+        text-align: left;
+
+        
     }
     
     .headline h1 {
