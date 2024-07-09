@@ -576,6 +576,7 @@
     .achievement-item img,
     .achievement-item.vertical img {
         height: 180px;
+      margin-left:-1%;
     }
       .achievement-item img{
         margin-left:-8%;
@@ -585,7 +586,7 @@
         margin-left:-4%;
     }
     .title-bg1 {
-        width:99.9%;
+        width:100%;
         margin-left:-1%;
 
 
