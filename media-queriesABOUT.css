@@ -577,6 +577,27 @@
     .achievement-item.vertical img {
         height: 180px;
     }
+      .achievement-item img{
+        margin-left:-8%;
+    }
+    .achievement-title{
+        width:102%;
+        margin-left:-4%;
+    }
+    .title-bg1 {
+        width:100%;
+        margin-left:-1%;
+
+
+    }
+  .title-bg2{
+        width:99.9%;
+
+    }
+    .title-bg3{
+        width:99.9%;
+
+    }
     .careers-section .center-headline {
         font-size: 24px;
         margin-bottom:2px;
