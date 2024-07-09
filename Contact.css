@@ -369,6 +369,9 @@ html,body
 @media (max-width: 768px) {
    .get-in-touch {
     padding: 60px 0;
+      display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .background-design {
@@ -376,16 +379,8 @@ html,body
     height: 50%;
   }
 
-  .background-design.left {
-    top: 0;
-    background-position: left top;
-    background-size: 100% auto;
-  }
-
-  .background-design.right {
-    top: 50%;
-    background-position: right bottom;
-    background-size: 100% auto;
+ .background-design.left , .background-design.right  {
+   display: none;
   }
 }
 
