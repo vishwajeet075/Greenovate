@@ -542,6 +542,7 @@ html, body {
 
 /* Styles for .quote_btn */
 .quote_btn {
+  display: inline-block; /* Ensure the anchor behaves like a button */
   flex-shrink: 0;
   width: auto; /* Let the button adjust its width automatically */
   padding: 10px 20px; /* Responsive padding */
@@ -552,6 +553,8 @@ html, body {
   font-size: 1.2vw; /* Responsive font size */
   line-height: 1.5;
   font-family: "Inter", sans-serif;
+  text-decoration: none; /* Remove underline from anchor tag */
+  text-align: center; /* Center align text */
   cursor: pointer; /* Change cursor on hover */
   margin-right: 5%;
 }
@@ -590,6 +593,7 @@ html, body {
     font-size: 2vw; /* Further adjust button font size */
   }
 }
+
 .container1 {
   width: 100%;
   display: flex;
