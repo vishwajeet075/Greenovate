@@ -82,3 +82,39 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+document.addEventListener('DOMContentLoaded', function() {
+    const carousel = document.getElementById('industryCarousel');
+    const scrollWrapper = carousel.querySelector('.image-scroll-wrapper');
+    const dots = carousel.querySelectorAll('.dot');
+    const slides = carousel.querySelectorAll('.image-item');
+
+    function updateActiveDot() {
+        const scrollPosition = scrollWrapper.scrollLeft;
+        const maxScroll = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
+        const scrollPercentage = scrollPosition / maxScroll;
+
+        // Calculate which dot should be active
+        const activeDotIndex = Math.min(Math.floor(scrollPercentage * dots.length), dots.length - 1);
+
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeDotIndex);
+        });
+    }
+
+    // Update dots on scroll
+    scrollWrapper.addEventListener('scroll', updateActiveDot);
+
+    // Initialize dots on page load
+    updateActiveDot();
+
+    // Make dots clickable
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            const scrollAmount = (scrollWrapper.scrollWidth - scrollWrapper.clientWidth) * (index / (dots.length - 1));
+            scrollWrapper.scrollTo({
+                left: scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+    });
+});
