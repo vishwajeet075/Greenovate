@@ -996,6 +996,10 @@
     #learn3{
         font-size:12px;
     }
+    .dot{
+        width:6px;
+        height:6px;
+    }
     .carbon-calculator {
         padding: 10px;
         border-radius: 15px;
