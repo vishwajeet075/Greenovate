@@ -997,8 +997,8 @@
         font-size:12px;
     }
     .dot{
-        width:6px;
-        height:6px;
+        width:8px;
+        height:8px;
     }
     .carbon-calculator {
         padding: 10px;
@@ -1107,7 +1107,7 @@
     
     .image-title {
         font-size: 12px;
-        width:122px;
+        width:120px;
         height:10px;
     }
     .circle-container{
