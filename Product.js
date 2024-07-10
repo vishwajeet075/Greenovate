@@ -163,3 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('An error occurred. Please try again.');
     });
   });
+
+  document.getElementById('learn-btn').addEventListener('click', function() {
+    document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
+});
