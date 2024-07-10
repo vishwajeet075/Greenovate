@@ -311,19 +311,21 @@ html, body {
 }
 
 .reserve, .learn {
+  display: inline-block; /* Ensure the anchor behaves like a button */
   padding: 11px 31px 12px 30px;
   font-weight: 650;
   font-size: 1.2vw;
   border-radius: 94px;
   font-family: "Inter", sans-serif;
   cursor: pointer;
+  text-decoration: none; /* Remove underline from anchor tag */
+  text-align: center; /* Center align text */
 }
 
 .box2 {
   display: flex;
   gap: 20px;
 }
-
 
 .reserve {
   background-color: #61c977;
@@ -334,8 +336,8 @@ html, body {
 .learn {
   border: 1.5px solid #61c977;
   background-color: transparent;
+  color:black;
 }
-
 
 .h2 {
   width: 100%;
@@ -345,7 +347,6 @@ html, body {
   line-height: 1.5;
   margin-bottom: 1vh;
 }
-
 
 @media (max-width: 1000px) {
   .header {
@@ -361,7 +362,8 @@ html, body {
     margin-top: -5%;
     margin-right: 5%;
   }
-  .gradient{
+
+  .gradient {
     width: 90%;
   }
 
@@ -393,7 +395,8 @@ html, body {
   .content {
     width: 70%;
   }
-  .gradient{
+
+  .gradient {
     width: 70%;
   }
 
@@ -404,7 +407,8 @@ html, body {
   .h2 {
     font-size: 2.5vw;
   }
-  .box2{
+
+  .box2 {
     margin-right: 5%;
   }
 
@@ -441,7 +445,7 @@ html, body {
 
   .heading {
     font-size: 24px;
-    margin-inline:auto;
+    margin-inline: auto;
   }
 
   .h2 {
@@ -469,19 +473,35 @@ html, body {
     font-size: 12px;
     padding: 8px 16px;
   }
-  .info2{
+
+  .info2 {
     margin-top: 150px;
   }
 }
 
 @media (max-width: 480px) {
-  .heading { font-size: 6vw; }
-  .h2 { font-size: 4.5vw; }
-  .box1 { font-size: 3vw; }
-  .reserve, .learn { font-size: 2.5vw; padding: 8px 15px; }
-  .quote { font-size:5vw; }
-  .quote_btn { font-size: 3vw; }
+  .heading {
+    font-size: 6vw;
+  }
 
+  .h2 {
+    font-size: 4.5vw;
+  }
+
+  .box1 {
+    font-size: 3vw;
+  }
+
+  .reserve, .learn {
+    font-size: 2.5vw;
+    padding: 8px 15px;
+  }
+
+  .quote {
+    font-size: 5vw;
+  }
+
+  
 }
 
 
