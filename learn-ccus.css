@@ -493,6 +493,7 @@ body {
 @media screen and (max-width: 480px) {
   .lectures-section {
     padding: 20px 10px;
+    margin-bottom:40px;
   }
 
   .video-controls button {
