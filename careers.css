@@ -232,9 +232,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 10px;
+    margin-top:10%;
     
-    margin-left:10%;
+    margin-left:20%;
 }
 
 .headline {
@@ -742,7 +743,7 @@ footer {
         margin-top:5%;
     }
     #circle2{
-        margin-left:-105%;
+        margin-left:-130%;
         margin-bottom:-5%;
         margin-top:-25%;
         width:8%;
