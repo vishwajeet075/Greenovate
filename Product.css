@@ -810,10 +810,10 @@ html, body {
   font-size: 16px;
 }
 
-.grid-item:nth-child(1) .overlay { background-image: url(rect1.png); }
-.grid-item:nth-child(2) .overlay { background-image: url(rect2.png); }
-.grid-item:nth-child(3) .overlay { background-image: url(rect3.png); }
-.grid-item:nth-child(4) .overlay { background-image: url(rect4.png); }
+.grid-item:nth-child(1) .overlay { background-image: url(Images/rect1.png); }
+.grid-item:nth-child(2) .overlay { background-image: url(Images/rect2.png); }
+.grid-item:nth-child(3) .overlay { background-image: url(Images/rect3.png); }
+.grid-item:nth-child(4) .overlay { background-image: url(Images/rect4.png); }
 
 @media (max-width: 1024px) {
   .title { font-size: 36px; }
@@ -873,30 +873,6 @@ html, body {
 }
 
 
-
-
-.circle1 {
-  width: 132.29px;
-  height: 132.29px;
-  border: 12.74px solid #89c2ec;
-  border-radius: 50%;
-  position: relative;
-  top: 60px;
-  left: 1400px;
-  z-index: 10;
-}
-
-.circle2 {
-  width: 195px;
-  height: 195px;
-  border: 12.74px solid #89c2ec;
-  border-radius: 50%;
-  position: relative;
-  top: -130px;
-  left: 1360px;
-  right: 800px;
-  z-index: 20;
-}
 .circle3 {
   width: 160px;
   height: 160px;
@@ -920,7 +896,7 @@ html, body {
 
 
 .features {
-  width: 90%;
+  width: 80%;
   max-width: 1100px;
   min-height: auto;
   border-radius: 25px;
@@ -929,7 +905,8 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: -180px auto 5vw; 
+  margin: 100px auto 0; 
+
   padding: 8vw 4vw; 
   overflow: visible; 
 }
@@ -992,7 +969,7 @@ html, body {
 @media (max-width: 768px) {
   .features {
     width: 90%;
-    padding: 6vw 2vw; /* Increased padding for mobile */
+    padding: 10vw 2vw; /* Increased padding for mobile */
     margin-bottom: 8vw; /* Increased bottom margin for mobile */
   }
   
@@ -1306,6 +1283,7 @@ html, body {
   .calculator {
     margin-top: 40px;
     margin-bottom: 60px;
+    max-width: 90%;
   }
 
   .btnbox {
@@ -1329,6 +1307,7 @@ html, body {
 @media (max-width: 480px) {
   .calculator {
     padding: 30px 15px;
+    max-width: 90%;
   }
 
   .click, .step {
@@ -1616,15 +1595,6 @@ html, body {
   }
 }
 
-@media (min-width: 1500px) {
-  .circle1, .circle2 {
-    display: none;
-  }
-  
-  .features {
-    margin-top: 200px;
-  }
-}
 
 
 footer {
