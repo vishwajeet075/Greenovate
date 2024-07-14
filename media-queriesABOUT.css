@@ -1,3 +1,34 @@
+@media screen and (max-width: 1440px) {
+    .gradient-linejourney{
+        width:85%;
+    }
+    .circle-container3{
+        display:none;
+    }
+    
+}
+@media screen and (max-width: 1740px) {
+    .gradient-linejourney{
+        width:85%;
+    }
+    .circle-container3{
+        display:none;
+    }
+
+}
+@media screen and (max-width: 1940px) {
+    .gradient-linejourney{
+        width:85%;
+    }
+    .circle-container3{
+        display:none;
+    }
+    #firstc{
+        display:none;
+    }
+    
+   
+}
 @media (max-width:1080px){
   
   
@@ -93,8 +124,6 @@
     }
     #aboutus {
         font-size: 20px;
-         margin-top:-10%;
-
     }
 
     #abouth4id {
@@ -226,8 +255,6 @@
     #aboutus {
         font-size: 28px;
         text-align: left;
-              margin-top:-8%;
-
     
     }
 
@@ -315,7 +342,7 @@
     }
 
     .founder-text p, #foundertext {
-        font-size: 12px;
+        font-size: 14px;
     }
     .journey-section {
         display: flex;
@@ -476,6 +503,10 @@
     .image-section{
         max-width:100%;
     }
+    .image-section img{
+        width:700%;
+    }
+   
     
     
     .underline {
@@ -576,9 +607,9 @@
     .achievement-item img,
     .achievement-item.vertical img {
         height: 180px;
-      margin-left:-1%;
+        margin-left:-1%;
     }
-      .achievement-item img{
+    .achievement-item img{
         margin-left:-8%;
     }
     .achievement-title{
@@ -591,7 +622,7 @@
 
 
     }
-  .title-bg2{
+    .title-bg2{
         width:99.9%;
 
     }
