@@ -1,5 +1,62 @@
 /* Responsive styles */
 /* Hamburger menu for mobile */
+@media screen and (max-width: 1300px) {
+    .headline-image{
+        display: none;
+    }
+    .careers-info{
+        margin-left:10%;
+
+    }
+    .clouds2image{
+        margin-left:-72%;
+        margin-bottom:-18%;
+        margin-top:-8%;
+    }
+   
+
+}
+@media screen and (min-width: 1225px) {
+    #half{
+        display:none;
+    }
+
+}
+
+@media screen and (min-width: 1328px) {
+    .clouds2image{
+        display:none;
+    }
+   
+   
+}
+@media screen and (min-width: 1728px) {
+    #circle2{
+        display:none;
+
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .headline-image{
+        display: none;
+    }
+    .careers-info{
+        margin-left:10%;
+
+    }
+    .clouds2image{
+        margin-left:-72%;
+        margin-bottom:-18%;
+        margin-top:-8%;
+    }
+  
+
+}
+
+
+
 @media (max-width:1024px){
     .footer-sections {
         margin-left: 5%;
@@ -64,6 +121,8 @@
     }
    
 }
+
+
     
 @media (max-width:1080px){
   
@@ -112,8 +171,7 @@
     }
 @media screen and (max-width: 1200px) {
     .careers-intro {
-         margin-left: 10%;
-        text-align: left;
+        margin-left: 20%;
     }
     
     .headline h1 {
@@ -135,9 +193,7 @@
     #circle1{
         display:none;
     }
-    #circle2{
-        display:none;
-    }
+    
     #half{
         display:none;
     }
@@ -151,6 +207,7 @@
     #greenfull{
         display:none;
     }
+
     
 }
 
@@ -158,8 +215,7 @@
     .careers-intro {
         flex-direction: column;
         align-items: flex-start;
-         margin-left: 10%;
-        text-align: left;
+        margin-left:10%;
     }
     
     .headline {
@@ -245,10 +301,7 @@
 @media screen and (max-width: 768px) {
     .careers-intro {
         padding: 30px;
-        margin-left: 10%;
-        text-align: left;
-
-        
+        margin-left: 0;
     }
     
     .headline h1 {
@@ -373,6 +426,9 @@
     }
     .careers-info h2 {
         font-size: 24px;
+    }
+    .info-row{
+        margin-left:-10%;
     }
 
     .info-box1, .info-box2, .info-box3 {
