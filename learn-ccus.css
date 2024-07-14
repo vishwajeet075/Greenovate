@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-   overflow-x: hidden;
 }
 
 .navbar-container {
@@ -605,6 +604,9 @@ body {
 
   .author-info {
     font-size: 14px;
+  }
+  .gradient-line{
+    width: 70%;
   }
 }
 
