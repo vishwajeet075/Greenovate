@@ -1,14 +1,11 @@
 body {
-    width: 1500px;
     font-family: "Manrope", sans-serif;
     overscroll-behavior: none;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
-
   }
   
-  .html{
+   body , html{
     overflow-x: hidden;
   }
   .navbar-container {
@@ -34,9 +31,9 @@ body {
     padding-right: 20px;
     margin: 0 auto;
     width: 90%;
-    position: absolute;
-    top: 20px;
-    z-index: 200;
+    position: fixed;
+    top: 38px;
+    z-index: 50;
   }
   
   .navbar-brand img {
@@ -101,23 +98,20 @@ body {
   .navbar-dropdown {
     display: none;
     position: fixed;
-    top: 50px; /* Adjust this value to match the height of your navbar */
+    top: 50px; 
     left: 0;
-    width: 100vw; /* Use viewport width */
-    height: auto; /* Let it grow based on content */
-    max-height: calc(100vh - 50px); /* Subtract navbar height from viewport height */
+    width: 100vw; 
+    height: auto; 
+    max-height: calc(100vh - 50px); 
     background-color: #fff;
-    overflow-y: auto; /* Add scrolling if content is too long */
-    z-index: 49; /* Just below the navbar */
+    overflow-y: auto;
+    z-index: 49; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
   .navbar-dropdown.active {
     display: block;
-    
   }
-  
-  
   
   .navbar-container .navbar {
     position: relative;
@@ -143,29 +137,30 @@ body {
     padding: 10px;
   }
   
-  .navbar-dropdown nav ul li a::after {
+  .navbar-dropdown nav ul li a:not(.contact-button1)::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: 5px; /* Adjust this value to position the line below the text */
+    bottom: 5px;
     left: 0;
     background: linear-gradient(to right, #222826, #066DB7, #61C977);
     transition: width 0.3s ease;
   }
   
-  .navbar-dropdown nav ul li a:hover {
-    color: darkgreen;
+  .navbar-dropdown nav ul li a:not(.contact-button1):hover::after,
+  .navbar-dropdown nav ul li a:not(.contact-button1):focus::after {
+    width: 30%;
   }
   
-  .navbar-dropdown nav ul li a:hover::after {
-    width: 120px;
+  .navbar-dropdown nav ul li a.contact-button1::after {
+    display: none;
   }
   
-  
-  
-  
-  
+  .navbar-dropdown nav ul li a.contact-button1:hover {
+    background-color: black;
+    color: #fff;
+  }
   
   .contact-button1 {
     margin-inline:auto;
@@ -174,6 +169,7 @@ body {
     font-size: 18px;
     font-weight: 700;
     text-align: center;
+    text-decoration: none;
   }
   
   .menu-icon {
@@ -215,12 +211,7 @@ body {
     transform: rotate(-45deg);
   }
   
-  
-    
-  
-  
   @media (max-width:1080px){
-  
     
     .navbar-container{
       width: 100%;
@@ -256,10 +247,10 @@ body {
     }
   
   
-
+    
     .get-in-touch {
       background-color: #ffffff;
-      padding: 80px 0;
+      padding: 80px 20px;
       position: relative;
       overflow: hidden;
     }
@@ -274,24 +265,18 @@ body {
     
     .background-design.left {
       left: 0;
-      background: url("wave1.png");
-      background-repeat: no-repeat;
-      background-position: left top;
-      background-size: contain;
+      background: url("wave1.png") no-repeat left top / contain;
     }
     
     .background-design.right {
       right: 0;
-      background: url("wave2.png");
-      background-repeat: no-repeat;
-      background-position: right bottom;
-      background-size: contain;
+      background: url("wave2.png") no-repeat right bottom / contain;
     }
     
     .container {
-      max-width: 800px;
+      max-width: 600px;
+      width: 100%;
       margin: 0 auto;
-      padding: 0 20px;
       position: relative;
       z-index: 2;
     }
@@ -314,13 +299,10 @@ body {
       display: flex;
       flex-direction: column;
       gap: 15px;
-      align-items: center;
-      justify-content: center;
     }
     
     #contact-form input,
     #contact-form textarea {
-      width: 70%;
       padding: 12px;
       border: 1px solid #5FA470;
       background-color: #FCF7F4;
@@ -330,6 +312,16 @@ body {
     
     #contact-form textarea {
       resize: vertical;
+      min-height: 100px;
+    }
+    
+    .form-row {
+      display: flex;
+      gap: 15px;
+    }
+    
+    .form-row input {
+      flex: 1;
     }
     
     .submit-btn {
@@ -342,32 +334,36 @@ body {
       font-weight: 600;
       cursor: pointer;
       transition: background-color 0.3s ease;
-      width: 70%;
+      width: 100%;
     }
     
     .submit-btn:hover {
       background-color: #1e572c;
     }
-
-    @media (max-width:1080px){
-      .background-design{
+    
+    @media (max-width: 1080px) {
+      .background-design {
         display: none;
       }
-    .get-in-touch{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      
+      .get-in-touch {
+        width: 100%;
+        padding: 60px 20px;
+      }
+      
+      .container {
+        max-width: 80%;
+      }
     }
     
     @media (max-width: 768px) {
       .get-in-touch {
-        padding: 60px 20px;
+        padding: 50px 15px;
+        padding-left: 0;
       }
-    
-      .background-design {
-        display: none;
+      
+      .container {
+        max-width: 80%;
       }
     
       .get-in-touch h2 {
@@ -395,7 +391,12 @@ body {
     
     @media (max-width: 480px) {
       .get-in-touch {
-        padding: 40px 15px;
+        padding: 40px 10px;
+        padding-left: 0;
+      }
+      
+      .container {
+        max-width: 70%;
       }
     
       .get-in-touch h2 {
@@ -409,71 +410,101 @@ body {
       #contact-form input,
       #contact-form textarea {
         font-size: 13px;
+        padding: 10px;
       }
     
       .submit-btn {
         font-size: 14px;
+        padding: 12px 30px;
       }
     }
 
-.office-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 40px;
-  background-color: #FCF7F4;
-  border-radius: 16px;
-  margin-top: 0;
-}
-
-.info {
-  flex: 1;
-  max-width: 50%;
-  padding-right: 20px;
-}
-
-.info h2 {
-  font-size: clamp(24px, 4vw, 32px);
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.info p {
-  font-size: clamp(14px, 2vw, 18px);
-  font-weight: 500;
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-.map {
-  flex: 1;
-  max-width: 40%;
-}
-
-.map img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-@media (max-width: 480px) {
-  .office-info {
-      flex-direction: column;
-      padding: 20px;
-      justify-content: center;
-      align-items: center;
-  }
-
-  .info, .map {
-      max-width: 100%;
-  }
-
-  .info {
-      padding-right: 0;
+    .office-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 40px;
+      background-color: #FCF7F4;
+      border-radius: 16px;
+      margin-top: 0;
+    }
+    
+    .info {
+      flex: 1;
+      max-width: 50%;
+      padding-right: 20px;
+    }
+    
+    .info h2 {
+      font-size: clamp(24px, 4vw, 32px);
+      font-weight: 700;
       margin-bottom: 20px;
-  }
-}
+    }
+    
+    .info p {
+      font-size: clamp(14px, 2vw, 18px);
+      font-weight: 500;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+    
+    .map {
+      flex: 1;
+      max-width: 40%;
+      
+    }
+    
+    .map img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+    
+    @media (max-width: 768px) {
+      .office-info {
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+      }
+    
+      .info, .map {
+        max-width: 100%;
+      }
+    
+      .info {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    
+      .map {
+        margin-top: 20px;
+      }
+    }
+    
+    @media (max-width:1200px){
+      .map{
+        margin-top: 5%;
+      }
+    }
+    @media (max-width: 480px) {
+      .office-info {
+        flex-direction: column;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+      }
+    
+      .info, .map {
+        max-width: 100%;
+      }
+    
+      .info {
+        padding-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+    
 
 
 footer {
