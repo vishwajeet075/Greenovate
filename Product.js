@@ -25,17 +25,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const selected = this.id.split('-')[0];
 
-            document.getElementById("metric-1-value").innerHTML = metrics[selected].metric1.value + `<img id="metric-1-arrow" src="${metrics[selected].metric1.arrow}" alt="" style="width: 61px; height: 61px; margin-left: 15px;">`;
+            document.getElementById("metric-1-value").innerHTML = metrics[selected].metric1.value + `<img id="metric-1-arrow" src="${metrics[selected].metric1.arrow}" alt="" style="width: 51px; height: 61px; margin-left: 15px;">`;
             document.getElementById("metric-1-desc").textContent = metrics[selected].metric1.desc;
             document.getElementById("metric-1-detail").textContent = metrics[selected].metric1.detail;
 
-            document.getElementById("metric-2-value").innerHTML = metrics[selected].metric2.value + `<img id="metric-2-arrow" src="${metrics[selected].metric2.arrow}" alt="" style="width: 61px; height: 61px; margin-left: 15px;">`;
+            document.getElementById("metric-2-value").innerHTML = metrics[selected].metric2.value + `<img id="metric-2-arrow" src="${metrics[selected].metric2.arrow}" alt="" style="width: 51px; height: 61px; margin-left: 15px;">`;
             document.getElementById("metric-2-desc").textContent = metrics[selected].metric2.desc;
             document.getElementById("metric-2-detail").textContent = metrics[selected].metric2.detail;
 
-            document.getElementById("metric-3-value").innerHTML = metrics[selected].metric3.value + `<img id="metric-3-arrow" src="${metrics[selected].metric3.arrow}" alt="" style="width: 61px; height: 61px; margin-left: 15px;">`;
+            document.getElementById("metric-3-value").innerHTML = metrics[selected].metric3.value + `<img id="metric-3-arrow" src="${metrics[selected].metric3.arrow}" alt="" style="width: 51px; height: 61px; margin-left: 15px;">`;
             document.getElementById("metric-3-desc").textContent = metrics[selected].metric3.desc;
             document.getElementById("metric-3-detail").textContent = metrics[selected].metric3.detail;
+
+               
         });
     });
 });
@@ -155,7 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(response => response.json())
     .then(data => {
         document.getElementById('popupOverlay').style.display = 'none';
-        alert('Form submitted successfully!');
         this.reset(); 
     })
     .catch((error) => {
@@ -163,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
       alert('An error occurred. Please try again.');
     });
   });
+
 
   document.getElementById('learn-btn').addEventListener('click', function() {
     document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
