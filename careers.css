@@ -86,7 +86,7 @@ header {
   
   .navbar-menu .underline {
     position: absolute;
-    bottom: -15px;
+    bottom: 2px;
     height: 2px;
     background: linear-gradient(to right, #222826, #066DB7, #61C977);
     width: 0;
