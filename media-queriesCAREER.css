@@ -124,51 +124,7 @@
 
 
     
-@media (max-width:1080px){
-  
-  
-    .header img{
-      width: 100%;
-      min-height: 100%;
-    }
-    
-    .navbar-container{
-        width: 110%;
-        margin-left:-10%;
-        margin-top:-2%;
-       
-      }
-    .navbar {
-      width: 100%;
-      padding: 10px 40px;
-      margin-left: 0;
-      position: fixed;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      justify-content: space-between;
-      overflow-x: hidden;
-      border-radius: 0;
-    }
-    
-    .navbar-dropdown {
-      top: 50px; 
-    }
-    
-    .menu-icon {
-        display: block;
-        
-    }
-    
-    .navbar-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-    }
-    #greenfull{
-        display:none;
-    }
-    }
+
 @media screen and (max-width: 1200px) {
     .careers-intro {
         margin-left: 20%;
