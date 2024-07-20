@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
     const carousel = document.getElementById('industryCarousel');
     const scrollWrapper = carousel.querySelector('.image-scroll-wrapper');
     const dots = carousel.querySelectorAll('.dot');
@@ -117,4 +117,85 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     });
+});
+document.addEventListener('DOMContentLoaded', () => {
+    const openPopupBtn = document.getElementById('open');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popupOverlay = document.getElementById('popupOverlay');
+  
+    openPopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.add('active');
+    });
+  
+    closePopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.remove('active');
+    });
+  
+    window.addEventListener('click', (event) => {
+      if (event.target === popupOverlay) {
+        popupOverlay.classList.remove('active');
+      }
+    });
+  });
+  
+  
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+  
+    const formData = {
+      name: this.name.value,
+      contact: this.contact.value,
+      email: this.email.value,
+      industry: this.industry.value,
+      position: this.position.value,
+      comment: this.comment.value
+    };
+  
+    fetch('https://api.greenovate.in/submit-form', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData),
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('popupOverlay').style.display = 'none';
+        this.reset(); 
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    });
+  });
+
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+  
+    const formData1 = {
+      name: this.name.value,
+      email: this.email.value,
+     message: this.message.value
+    };
+  
+    fetch('https://api.greenovate.in/submit-form-1', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData1),
+    })
+    .then(response => response.json())
+    .then(data => {
+        this.reset(); 
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    });
+  });
+
+  document.getElementById('learn-btn').addEventListener('click', function() {
+    document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
 });
