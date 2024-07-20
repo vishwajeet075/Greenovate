@@ -246,7 +246,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     message: document.getElementById('message').value
   };
 
-  fetch('/submit-form-contact', {
+  fetch('https://api.greenovate.in/submit-form-contact', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
