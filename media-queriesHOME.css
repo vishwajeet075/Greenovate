@@ -67,20 +67,215 @@
 
 
 
-@media (max-width:1080px){
+.navbar-container {
+    width: 100%;
+    background-color:white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    z-index: 300;
+  }
   
   
-    .header img{
-      width: 100%;
-      min-height: 100%;
-    }
+  .navbar {
+    background-color: #fff;
+    box-shadow: 5px 5px 45px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    padding-right: 20px;
+    margin: 0 auto;
+    width: 90%;
+    position: fixed;
+    top: 38px;
+    z-index: 50;
+  }
+  
+  .navbar-brand img {
+    height: 25px;
+  }
+  
+  .navbar-menu {
+    position: relative;
+  }
+  
+  .navbar-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .navbar-menu ul li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu ul li a {
+    text-decoration: none;
+    color: #1e572c;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-menu .underline {
+    position: absolute;
+    bottom: -15px;
+    height: 2px;
+    background: linear-gradient(to right, #222826, #066DB7, #61C977);
+    width: 0;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-menu ul li a.contact-button {
+    border-radius: 30px;
+    background-color: #28a745;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 24px;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-menu ul li a.contact-button:hover {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .navbar-dropdown {
+    display: none;
+    position: fixed;
+    top: 50px; 
+    left: 0;
+    width: 100vw; 
+    height: auto; 
+    max-height: calc(100vh - 50px); 
+    background-color: #fff;
+    overflow-y: auto;
+    z-index: 49; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  
+  .navbar-dropdown.active {
+    display: block;
+  }
+  
+  .navbar-container .navbar {
+    position: relative;
+  }
+  
+  .navbar-dropdown nav ul {
+    list-style: none;
+    padding: 20px;
+    margin: 0;
+  }
+  
+  .navbar-dropdown nav ul li {
+    margin-bottom: 10px;
+  }
+  
+  .navbar-dropdown nav ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #1e572c;
+    font-weight: 600;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+  }
+  
+  .navbar-dropdown nav ul li a:not(.contact-button1)::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 0;
+    background: linear-gradient(to right, #222826, #066DB7, #61C977);
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-dropdown nav ul li a:not(.contact-button1):hover::after,
+  .navbar-dropdown nav ul li a:not(.contact-button1):focus::after {
+    width: 30%;
+  }
+  
+  .navbar-dropdown nav ul li a.contact-button1::after {
+    display: none;
+  }
+  
+  .navbar-dropdown nav ul li a.contact-button1:hover {
+    background-color: black;
+    color: #fff;
+  }
+  
+  .contact-button1 {
+    margin-inline:auto;
+    border-radius: 10px;
+    background-color: lightgreen;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  .menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu-icon span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #1e572c;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+  }
+  
+  .menu-icon span:nth-child(1) {
+    top: 25%;
+  }
+  
+  .menu-icon span:nth-child(2) {
+    top: 75%;
+  }
+  
+  .menu-icon.open span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  
+  .menu-icon.open span:nth-child(2) {
+    top: 50%;
+    transform: rotate(-45deg);
+  }
+  
+  @media (max-width:1080px){
     
     .navbar-container{
-        width: 110%;
-        margin-left:-10%;
-        margin-top:-2%;
-       
-      }
+      width: 100%;
+     
+    }
     .navbar {
       width: 100%;
       padding: 10px 40px;
@@ -97,6 +292,14 @@
     .navbar-dropdown {
       top: 50px; 
     }
+    .navbar-brand img {
+        height: 25px;
+        margin-left:10%;
+    
+      }
+    
+    
+
     
     .menu-icon {
         display: block;
@@ -109,58 +312,7 @@
       right: 0;
     }
     }
-    /* Existing styles remain unchanged */
-
-/* Add these media queries at the end of your CSS file */
-
-@media (min-width: 1025px) {
-    .navbar-container {
-      width: 100%;
-      margin-left: 0;
-      margin-top: 0;
-    }
   
-    .navbar {
-      width: 90%;
-      max-width: 1400px; /* Limit the maximum width for very large screens */
-      padding: 10px 40px;
-      margin: 0 auto;
-      top: 38px;
-      border-radius: 30px;
-    }
-  
-    .navbar-brand img {
-      height: 30px; /* Slightly larger logo for bigger screens */
-    }
-  
-    .navbar-menu ul {
-      gap: 30px; /* Increased gap between menu items */
-    }
-  
-    .navbar-menu ul li a {
-      font-size: 18px; /* Slightly larger font size */
-      padding: 10px 20px; /* Larger padding for menu items */
-    }
-  
-    .navbar-menu ul li a.contact-button {
-      padding: 10px 28px; /* Larger padding for contact button */
-    }
-  }
-  
-  /* For even larger screens */
-  @media (min-width: 1440px) {
-    .navbar {
-      max-width: 1600px;
-    }
-  
-    .navbar-brand img {
-      height: 35px;
-    }
-  
-    .navbar-menu ul li a {
-      font-size: 20px;
-    }
-  }
   @media (max-width: 1440px) {
     .content {
         display: flex;
