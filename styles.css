@@ -37,19 +37,18 @@ header {
 
 .navbar-container {
     width: 100%;
+    background-color:white;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center; 
     position: relative;
-    z-index: 100;
-   
+    z-index: 300;
   }
   
   
   .navbar {
-    background-color: #ffffff;
-
+    background-color: #fff;
     box-shadow: 5px 5px 45px 0px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
     display: flex;
@@ -58,7 +57,7 @@ header {
     padding: 10px 40px;
     padding-right: 20px;
     margin: 0 auto;
-    width: 60%;
+    width: 90%;
     position: fixed;
     top: 38px;
     z-index: 50;
@@ -66,8 +65,6 @@ header {
   
   .navbar-brand img {
     height: 25px;
-    margin-left:20%;
-
   }
   
   .navbar-menu {
@@ -102,7 +99,7 @@ header {
   
   .navbar-menu .underline {
     position: absolute;
-    bottom: -40%;
+    bottom: -15px;
     height: 2px;
     background: linear-gradient(to right, #222826, #066DB7, #61C977);
     width: 0;
@@ -128,23 +125,20 @@ header {
   .navbar-dropdown {
     display: none;
     position: fixed;
-    top: 50px; /* Adjust this value to match the height of your navbar */
+    top: 50px; 
     left: 0;
-    width: 100vw; /* Use viewport width */
-    height: auto; /* Let it grow based on content */
-    max-height: calc(100vh - 50px); /* Subtract navbar height from viewport height */
+    width: 100vw; 
+    height: auto; 
+    max-height: calc(100vh - 50px); 
     background-color: #fff;
-    overflow-y: auto; /* Add scrolling if content is too long */
-    z-index: 49; /* Just below the navbar */
+    overflow-y: auto;
+    z-index: 49; 
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
   
   .navbar-dropdown.active {
     display: block;
-    
   }
-  
-  
   
   .navbar-container .navbar {
     position: relative;
@@ -170,29 +164,30 @@ header {
     padding: 10px;
   }
   
-  .navbar-dropdown nav ul li a::after {
+  .navbar-dropdown nav ul li a:not(.contact-button1)::after {
     content: '';
     position: absolute;
     width: 0;
     height: 2px;
-    bottom: -40%; /* Adjust this value to position the line below the text */
+    bottom: 5px;
     left: 0;
     background: linear-gradient(to right, #222826, #066DB7, #61C977);
     transition: width 0.3s ease;
   }
   
-  .navbar-dropdown nav ul li a:hover {
-    color: darkgreen;
+  .navbar-dropdown nav ul li a:not(.contact-button1):hover::after,
+  .navbar-dropdown nav ul li a:not(.contact-button1):focus::after {
+    width: 30%;
   }
   
-  .navbar-dropdown nav ul li a:hover::after {
-    width: 120px;
+  .navbar-dropdown nav ul li a.contact-button1::after {
+    display: none;
   }
   
-  
-  
-  
-  
+  .navbar-dropdown nav ul li a.contact-button1:hover {
+    background-color: black;
+    color: #fff;
+  }
   
   .contact-button1 {
     margin-inline:auto;
@@ -201,6 +196,7 @@ header {
     font-size: 18px;
     font-weight: 700;
     text-align: center;
+    text-decoration: none;
   }
   
   .menu-icon {
@@ -242,9 +238,48 @@ header {
     transform: rotate(-45deg);
   }
   
-  
+  @media (max-width:1080px){
     
-  
+    .navbar-container{
+      width: 100%;
+     
+    }
+    .navbar {
+      width: 100%;
+      padding: 10px 40px;
+      margin-left: 0;
+      position: fixed;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: space-between;
+      overflow-x: hidden;
+      border-radius: 0;
+    }
+    
+    .navbar-dropdown {
+      top: 50px; 
+    }
+    .navbar-brand img {
+        height: 25px;
+        margin-left:10%;
+    
+      }
+    
+    
+
+    
+    .menu-icon {
+        display: block;
+        
+    }
+    
+    .navbar-menu {
+      display: none;
+      position: absolute;
+      right: 0;
+    }
+    }
   
   
 
