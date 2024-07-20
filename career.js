@@ -64,55 +64,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-const express = require('express');
-const multer = require('multer');
-const nodemailer = require('nodemailer');
-const app = express();
 
-const upload = multer({ dest: 'uploads/' });
 
-app.post('/submit-application', upload.single('cv'), (req, res) => {
-    const { name, email, role, qualification, location, coverLetter } = req.body;
-    const cv = req.file;
+document.getElementById('applicationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    // Configure nodemailer with your email service
-    let transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'your-email@gmail.com',
-            pass: 'your-email-password'
-        }
-    });
+    const formData = new FormData();
+    formData.append('name', this.name.value);
+    formData.append('email', this.email.value);
+    formData.append('role', this.role.value);
+    formData.append('qualification', this.qualification.value);
+    formData.append('location', this.location.value);
+    formData.append('coverLetter', this.coverLetter.value);
+    formData.append('cv', this.cv.files[0]);
 
-    let mailOptions = {
-        from: 'your-email@gmail.com',
-        to: 'owner@example.com',
-        subject: `New Job Application: ${role}`,
-        text: `
-            Name: ${name}
-            Email: ${email}
-            Role: ${role}
-            Qualification: ${qualification}
-            Location: ${location}
-            Cover Letter: ${coverLetter}
-        `,
-        attachments: [
-            {
-                filename: cv.originalname,
-                path: cv.path
-            }
-        ]
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.status(500).send('Error sending email');
-        } else {
-            console.log('Email sent: ' + info.response);
-            res.status(200).send('Application submitted successfully');
-        }
+    fetch('https://api.greenovate.in/job-application', {
+        method: 'POST',
+        body: formData,
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('applicationPopup').style.display = 'none';
+        this.reset();
+        alert('Application submitted successfully!');
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
     });
 });
-
-app.listen(3000, () => console.log('Server running on port 3000'));
