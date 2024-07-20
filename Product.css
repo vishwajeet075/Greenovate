@@ -1426,6 +1426,7 @@ html, body {
 
 .submit-btn:hover {
   background-color: grey;
+  color:black;
 }
 
 /* Media Queries */
@@ -1858,6 +1859,7 @@ footer {
 
 .submit-btn:hover {
   background-color: #F2F2F2;
+  color:black;
 }
 
 #Copy {
