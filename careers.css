@@ -86,7 +86,7 @@ header {
   
   .navbar-menu .underline {
     position: absolute;
-    bottom: 3px;
+    bottom: -15px;
     height: 2px;
     background: linear-gradient(to right, #222826, #066DB7, #61C977);
     width: 0;
@@ -247,6 +247,14 @@ header {
     .navbar-dropdown {
       top: 50px; 
     }
+    .navbar-brand img {
+        height: 25px;
+        margin-left:10%;
+    
+      }
+    
+    
+
     
     .menu-icon {
         display: block;
@@ -262,55 +270,6 @@ header {
   
   
   
-  
-  
-  .contact-button1 {
-    margin-inline:auto;
-    border-radius: 10px;
-    background-color: lightgreen;
-    font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-  }
-  
-  .menu-icon {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    cursor: pointer;
-    display: none;
-  }
-  
-  .menu-icon span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #1e572c;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-  }
-  
-  .menu-icon span:nth-child(1) {
-    top: 25%;
-  }
-  
-  .menu-icon span:nth-child(2) {
-    top: 75%;
-  }
-  
-  .menu-icon.open span:nth-child(1) {
-    top: 50%;
-    transform: rotate(45deg);
-  }
-  
-  .menu-icon.open span:nth-child(2) {
-    top: 50%;
-    transform: rotate(-45deg);
-  }
   
 /* Careers Intro Section */
 .careers-intro {
