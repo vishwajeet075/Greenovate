@@ -78,7 +78,7 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     formData.append('coverLetter', this.coverLetter.value);
     formData.append('cv', this.cv.files[0]);
 
-    fetch('https://api.greenovate.in/job-application', {
+    fetch('https://api.greenovate.in/submit-job-application', {
         method: 'POST',
         body: formData,
     })
