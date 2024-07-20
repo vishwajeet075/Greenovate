@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       comment: this.comment.value
     };
   
-    fetch('http://server1-env.eba-27gyhsya.ap-south-1.elasticbeanstalk.com/submit-form', {
+    fetch('https://api.greenovate.in/submit-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
