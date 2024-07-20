@@ -166,6 +166,32 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+  
+    const formData1 = {
+      name: this.name.value,
+      email: this.email.value,
+     message: this.message.value
+    };
+  
+    fetch('https://api.greenovate.in/submit-form-1', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(formData1),
+    })
+    .then(response => response.json())
+    .then(data => {
+        this.reset(); 
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+      alert('An error occurred. Please try again.');
+    });
+  });
+
   document.getElementById('learn-btn').addEventListener('click', function() {
     document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
 });
