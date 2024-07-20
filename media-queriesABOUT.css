@@ -29,66 +29,7 @@
     
    
 }
-@media (max-width:1080px){
-  
-  
-    .header img{
-      width: 100%;
-      min-height: 100%;
-    }
-    
-    .navbar-container{
-        width: 110%;
-        margin-left:-10%;
-        margin-top:-2%;
-       
-      }
-    .navbar {
-      width: 100%;
-      padding: 10px 40px;
-      margin-left: 0;
-      position: fixed;
-      top: 0;
-      z-index: 50;
-      display: flex;
-      justify-content: space-between;
-      overflow-x: hidden;
-      border-radius: 0;
-    }
-    
-    .navbar-dropdown {
-      top: 50px; 
-    }
-    
-    .menu-icon {
-        display: block;
-        
-    }
-    
-    .navbar-menu {
-      display: none;
-      position: absolute;
-      right: 0;
-    }
-    .navbar-menu .underline {
-        position: absolute;
-        bottom: -20%;
-        height: 2px;
-        background: linear-gradient(to right, #222826, #066DB7, #61C977);
-        width: 0;
-        transition: all 0.3s ease;
-      }
-      .navbar-dropdown nav ul li a::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        bottom: -10%; /* Adjust this value to position the line below the text */
-        left: 0;
-        background: linear-gradient(to right, #222826, #066DB7, #61C977);
-        transition: width 0.3s ease;
-      }
-    }
+
 @media screen and (max-width: 1024px) {
     .about-content {
         flex-direction: column;
@@ -535,13 +476,13 @@
         text-align: left;
         padding-left: 0;
         font-weight:400;
-    }
+ }
     .mission-vision {
         padding: 20px;
         margin: 0;
         background-color: transparent;
         border: none;
-    }
+}
 
     .section-row {
         flex-direction: column;
