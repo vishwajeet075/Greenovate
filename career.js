@@ -72,13 +72,18 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
 
     fetch('https://api.greenovate.in/submit-job-application', {
         method: 'POST',
-        body: formData,
+        body: formData, // This is correct, no need to change
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         document.getElementById('applicationPopup').style.display = 'none';
         this.reset();
-        alert('Application submitted successfully!');
+        alert(data.message); // Use the message from the server
     })
     .catch((error) => {
         console.error('Error:', error);
