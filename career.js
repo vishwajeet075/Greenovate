@@ -83,7 +83,6 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     .then(data => {
         document.getElementById('applicationPopup').style.display = 'none';
         this.reset();
-        alert(data.message); // Use the message from the server
     })
     .catch((error) => {
         console.error('Error:', error);
