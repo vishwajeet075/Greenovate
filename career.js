@@ -68,15 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.getElementById('applicationForm').addEventListener('submit', function(e) {
     e.preventDefault();
-
-    const formData = new FormData();
-    formData.append('name', this.name.value);
-    formData.append('email', this.email.value);
-    formData.append('role', this.role.value);
-    formData.append('qualification', this.qualification.value);
-    formData.append('location', this.location.value);
-    formData.append('coverLetter', this.coverLetter.value);
-    formData.append('cv', this.cv.files[0]);
+    const formData = new FormData(this);
 
     fetch('https://api.greenovate.in/submit-job-application', {
         method: 'POST',
