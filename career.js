@@ -70,7 +70,7 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     e.preventDefault();
     const formData = new FormData(this);
 
-    fetch('https://api.greenovate.in/submit-job-application', {
+    fetch('http://api.greenovate.in/submit-job-application', {
         method: 'POST',
         body: formData, // This is correct, no need to change
     })
