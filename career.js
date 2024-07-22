@@ -66,26 +66,58 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.getElementById('applicationForm').addEventListener('submit', function(e) {
+document.addEventListener('DOMContentLoaded', () => {
+    const openPopupBtn = document.getElementById('open');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popupOverlay = document.getElementById('popupOverlay');
+  
+    openPopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.add('active');
+    });
+  
+    closePopupBtn.addEventListener('click', () => {
+      popupOverlay.classList.remove('active');
+    });
+  
+    window.addEventListener('click', (event) => {
+      if (event.target === popupOverlay) {
+        popupOverlay.classList.remove('active');
+      }
+    });
+  });
+  
+  
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
     e.preventDefault();
-    const formData = new FormData(this);
 
-    fetch('http://api.greenovate.in/submit-job-application', {
+    const formData = new FormData();
+    
+    formData.append('name', this.name.value);
+    formData.append('email', this.email.value);
+    formData.append('role', this.role.value);
+    formData.append('qualification', this.qualification.value);
+    formData.append('location', this.location.value);
+    formData.append('coverLetter', this.coverLetter.value);
+    
+    // Append the file
+    const cvFile = this.cv.files[0];
+    if (cvFile) {
+        formData.append('cv', cvFile, cvFile.name);
+    }
+
+    fetch('https://api.greenovate.in/submit-form-job-application', {
         method: 'POST',
-        body: formData, // This is correct, no need to change
+        body: formData
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-    })
+    .then(response => response.json())
     .then(data => {
-        document.getElementById('applicationPopup').style.display = 'none';
-        this.reset();
+        document.getElementById('popupOverlay').style.display = 'none';
+        this.reset(); 
+        alert('Application submitted successfully');
     })
     .catch((error) => {
         console.error('Error:', error);
         alert('An error occurred. Please try again.');
     });
 });
+
