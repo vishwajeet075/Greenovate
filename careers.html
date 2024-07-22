@@ -239,51 +239,6 @@ Beside COEP Boat Club, College of Engineering, Shivajinagar, Pune, Maharashtra 4
             <p>&copy; 2024 Greenovate Solutions. All rights Reserved.</p>
         </div>
     </footer>
-    <script>
-        const applyButtons = document.querySelectorAll('.apply-button');
-        const popup = document.getElementById('applicationPopup');
-        const closeBtn = document.querySelector('.close');
-        const form = document.getElementById('applicationForm');
-        
-        applyButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                popup.style.display = 'block';
-                const role = e.target.closest('.info-box1, .info-box2, .info-box3').querySelector('h3').textContent;
-                document.querySelector('input[name="role"]').value = role;
-            });
-        });
-        
-        closeBtn.onclick = () => popup.style.display = 'none';
-        
-        window.onclick = (event) => {
-            if (event.target == popup) {
-                popup.style.display = 'none';
-            }
-        };
-        
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            
-            try {
-                const response = await fetch('/submit-application', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                if (response.ok) {
-                    alert('Application submitted successfully!');
-                    popup.style.display = 'none';
-                    form.reset();
-                } else {
-                    alert('There was an error submitting your application. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('There was an error submitting your application. Please try again.');
-            }
-        });
-        </script>
+  
 </body>
 </html>
