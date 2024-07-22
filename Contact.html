@@ -252,7 +252,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(formData),
-      mode: 'no-cors',
+    mode: 'no-cors',
   })
   .then(response => response.json())
   .then(data => {
@@ -264,6 +264,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     alert('An error occurred. Please try again.');
   });
 });
+
         </script>
 
   
