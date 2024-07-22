@@ -119,35 +119,34 @@
                         <li>Adobe Illustrator</li>
                         <li>Adobe Premiere Pro or any video editing software</li>
                     </ul>
-                    <a href="#" class="apply-button">Apply Now</a>
+                    <button class="apply-button" id="open">Apply Now</button>
                 </div>
             </div>
             <img src="greenfull.png" alt="Greenovate Solutions Pvt Ltd" id="greenfull">
 
         </section>
-        <div id="applicationPopup" class="popup">
-            <div class="popup-content">
-                <div class="popup-header">
-                    <img src="logo[1].jpg" alt="Greenovate Logo" class="logo">
-                    <span class="close">&times;</span>
+       <div class="popup-overlay" id="popupOverlay">
+        <div class="popup-form">
+          <div class="popup-header">
+            <img src="Images/logo.jpg" alt="Greenovate Logo">
+            <button class="close-btn" id="closePopupBtn">&times;</button>
+          </div>
+          <h2>Job Application</h2>
+          <form id="registerForm">
+            <input type="text" name="name" placeholder="Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="role" placeholder="Role Applying for" required>
+            <input type="text" name="qualification" placeholder="Qualification" required>
+            <div class="form-row">
+                <input type="text" name="location" placeholder="Location" required style="margin-bottom: 0;">
+                <div class="file-upload">
+                  <label for="cv">Upload CV</label>
+                  <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
                 </div>
-                <h2>Job Application</h2>
-                <form id="applicationForm">
-                    <input type="text" name="name" placeholder="Name" required>
-                    <input type="email" name="email" placeholder="Email" required>
-                    <input type="text" name="role" placeholder="Role Applying for" required>
-                    <input type="text" name="qualification" placeholder="Qualification" required>
-                    <div class="form-row">
-                        <input type="text" name="location" placeholder="Location" required>
-                        <div class="file-upload">
-                            <label for="cv">Upload CV  &ThinSpace; &MediumSpace; &MediumSpace; v</label>
-                            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
-                        </div>
-                    </div>
-                    <textarea name="coverLetter" placeholder="Cover Letter" required></textarea>
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
+              </div>
+            <textarea name="coverLetter" placeholder="Cover Letter" required></textarea>
+            <button type="submit" class="submit-btn">Submit</button>
+          </form>
         </div>
         <img src="CIRCLES_3[1].png" alt="Careers at Greenovate" id="half">
 
