@@ -779,7 +779,7 @@
         overflow-x: hidden;
     }
         .navbar-brand img {
-        margin-left:10%;
+        margin-left:-5%;
         height: 25px;
       }
     .content {
