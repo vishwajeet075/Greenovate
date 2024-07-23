@@ -363,7 +363,7 @@
 
 @media screen and (max-width: 480px) {
         .navbar-brand img {
-        margin-left:10%;
+        margin-left:-5%;
         height: 25px;
       }
     .careers-intro {
