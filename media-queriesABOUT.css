@@ -430,6 +430,10 @@
     .text-section h1 {
         font-size: 20px;
     }
+        .navbar-brand img {
+        margin-left:10%;
+        height: 25px;
+      }
 
     .gradient-line{
 
