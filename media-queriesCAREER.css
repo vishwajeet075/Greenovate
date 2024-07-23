@@ -362,6 +362,10 @@
 }
 
 @media screen and (max-width: 480px) {
+        .navbar-brand img {
+        margin-left:10%;
+        height: 25px;
+      }
     .careers-intro {
         margin-left: 5%;
         margin-top: 5%;
