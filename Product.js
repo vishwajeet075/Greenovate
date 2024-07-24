@@ -170,9 +170,9 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
   
     const formData1 = {
-      name: this.name1.value,
-      email: this.email1.value,
-     message: this.message1.value
+      name: this.name.value,
+      email: this.email.value,
+     message: this.message.value
     };
   
     fetch('https://api.greenovate.in/submit-form-1', {
