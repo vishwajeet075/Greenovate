@@ -271,6 +271,7 @@ document.addEventListener("DOMContentLoaded", function() {
       await dynamoDB.put(params).promise();
       console.log('Data saved to DynamoDB successfully');
       alert('Form submitted successfully');
+        this.reset();
     } catch (error) {
       console.error('Error submitting form:', error);
       alert('An error occurred: ' + error.message);
