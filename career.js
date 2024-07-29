@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('cv', cvFile, cvFile.name);
     }
 
-    fetch('https://api.greenovate.in/submit-form-job-application', {
+    fetch('https://server.greenovate.in/submit-form-job-application', {
         method: 'POST',
         body: formData
     })
