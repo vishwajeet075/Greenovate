@@ -68,6 +68,7 @@
 
 
 
+  
   @media (max-width: 1440px) {
     .content {
         display: flex;
@@ -778,8 +779,8 @@
     body {
         overflow-x: hidden;
     }
-        .navbar-brand img {
-        margin-left:-5%;
+    .navbar-brand img {
+        margin-left:10%;
         height: 25px;
       }
     .content {
@@ -1074,6 +1075,7 @@
     .subtitle {
         font-size: 0.6em;
     }
+    
 
     .launch-text {
         font-size: 0.8em;
@@ -1168,7 +1170,7 @@
     .image-title {
         font-size: 12px;
         width:120px;
-        height:10px;
+        height:5px;
     }
     .circle-container{
         display:none;
