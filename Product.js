@@ -175,25 +175,24 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
      message: this.message.value
     };
    console.log(formData1);
-    fetch('https://server.greenovate.in/submit-form-1', {
-      method: 'POST',
-      headers: {
+axios.post('https://server.greenovate.in/submit-form-1', formData1, {
+    headers: {
         'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(formData1),
-    })
-    .then(response => response.json())
-    .then(data => {
-        this.reset(); 
-    })
-  .catch((error) => {
-  console.error('Error:', error);
-  if (error.response) {
-    console.error('Response data:', error.response.data);
-    console.error('Response status:', error.response.status);
-  }
-  alert('An error occurred. Please try again.');
+    }
+})
+.then(response => {
+    console.log(response.data);
+    document.getElementById('contact-form').reset();
+})
+.catch(error => {
+    console.error('Error:', error);
+    if (error.response) {
+        console.error('Response data:', error.response.data);
+        console.error('Response status:', error.response.status);
+    }
+    alert('An error occurred. Please try again.');
 });
+
   });
 
   document.getElementById('learn-btn').addEventListener('click', function() {
