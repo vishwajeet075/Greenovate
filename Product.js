@@ -186,10 +186,14 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     .then(data => {
         this.reset(); 
     })
-    .catch((error) => {
-      console.error('Error:', error);
-      alert('An error occurred. Please try again.');
-    });
+  .catch((error) => {
+  console.error('Error:', error);
+  if (error.response) {
+    console.error('Response data:', error.response.data);
+    console.error('Response status:', error.response.status);
+  }
+  alert('An error occurred. Please try again.');
+});
   });
 
   document.getElementById('learn-btn').addEventListener('click', function() {
