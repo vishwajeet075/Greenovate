@@ -174,7 +174,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
       email: this.email.value,
      message: this.message.value
     };
-  
+   console.log(formData1);
     fetch('https://server.greenovate.in/submit-form-1', {
       method: 'POST',
       headers: {
