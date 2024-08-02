@@ -235,48 +235,41 @@ document.addEventListener("DOMContentLoaded", function() {
 
 });
 
-  // Configure AWS
-  AWS.config.update({
-    region: 'ap-south-1',
-    // Use AWS Cognito Identity Pool ID for authentication
-    credentials: new AWS.CognitoIdentityCredentials({
-      IdentityPoolId: 'ap-south-1:a286d26e-3f19-4e51-b36d-c2ad5228c2b5'
-    })
-  });
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
 
-  const dynamoDB = new AWS.DynamoDB.DocumentClient();
-  const TABLE_NAME = 'Contact';
+  const formData = {
+    name: document.getElementById('name').value,
+    email: document.getElementById('email').value,
+    company: document.getElementById('company').value,
+    designation: document.getElementById('designation').value,
+    city: document.getElementById('city').value,
+    country: document.getElementById('country').value,
+    message: document.getElementById('message').value
+  };
 
-  document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const formData = new FormData(event.target);
-    const formProps = Object.fromEntries(formData);
-
-    try {
-      const params = {
-        TableName: TABLE_NAME,
-        Item: {
-          Email: formProps.email,
-          Name: formProps.name,
-          Company: formProps.company,
-          Designation: formProps.designation,
-          City: formProps.city,
-          Country: formProps.country,
-          Message: formProps.message,
-          Timestamp: new Date().toISOString()
-        }
-      };
-
-      await dynamoDB.put(params).promise();
-      console.log('Data saved to DynamoDB successfully');
+  fetch('https://server.greenovate.in/submit-contact-form', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(formData),
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.success) {
       alert('Form submitted successfully');
-        this.reset();
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      alert('An error occurred: ' + error.message);
+      // Optionally reset the form here
+    } else {
+      alert('Error submitting form: ' + data.message);
     }
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+    alert('An error occurred while submitting the form');
   });
+});
+
 
         </script>
 
