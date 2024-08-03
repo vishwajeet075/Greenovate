@@ -248,7 +248,7 @@ document.addEventListener("DOMContentLoaded", function() {
     message: document.getElementById('message').value
   };
 
-  fetch('https://server2.greenovate.in/submit-contact-form', {
+  fetch('https://server2.greenovate.in/.netlify/functions/app/submit-contact-form', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
