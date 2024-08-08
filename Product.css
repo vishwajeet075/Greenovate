@@ -710,6 +710,10 @@ html, body {
   .cont1{
     margin-left: 5%;
   }
+  .img1{
+    border-radius: 15px;
+    max-width: 90%;
+  }
 }
 
 
@@ -820,7 +824,7 @@ html, body {
 @media (max-width: 1024px) {
   .title { font-size: 36px; }
   .description { font-size: 16px; width: 200%; }
-  .text h3 { font-size: 20px; }
+  .text h3 { font-size: 18px; }
   .text p { font-size: 14px; }
 
  
@@ -857,13 +861,13 @@ html, body {
   
   .text h3 {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 15px;
     margin-bottom: -10px;
   }
   
   .text p {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 15px;
   }
   .description{
     width: 100%;
@@ -874,7 +878,20 @@ html, body {
   }
 }
 
-
+@media (max-width:320px) {
+  .text h3{
+    font-size: 15px;
+  }
+  .text p{
+    font-size: 12px;
+  }
+  .img1{
+    border-radius: 10px;
+  }
+  .title{
+    font-size: 28px;
+  }
+}
 .circle3 {
   width: 160px;
   height: 160px;
