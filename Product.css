@@ -617,6 +617,7 @@ html, body {
   }
   .quote_btn {
     font-size: 2vw; 
+    padding:8px 16px;
   }
 }
 
