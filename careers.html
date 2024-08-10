@@ -283,32 +283,32 @@ window.onclick = (event) => {
     }
 };
 
- document.getElementById('applicationForm').addEventListener('submit', function(e) {
+document.getElementById('applicationForm').addEventListener('submit', function(e) {
     e.preventDefault();
-
-    const formData = new FormData();
+    const formData = new FormData(this);
     
-    formData.append('name', this.name.value);
-    formData.append('email', this.email.value);
-    formData.append('role', this.role.value);
-    formData.append('qualification', this.qualification.value);
-    formData.append('location', this.location.value);
-    formData.append('coverLetter', this.coverLetter.value);
-    
-    // Append the file
     const cvFile = this.cv.files[0];
     if (cvFile) {
-        formData.append('cv', cvFile, cvFile.name);
+        const MAX_FILE_SIZE = 200 * 1024 * 1024; // 200MB
+        if (cvFile.size > MAX_FILE_SIZE) {
+            alert('File is too large. Please select a file smaller than 200MB.');
+            return;
+        }
     }
 
     fetch('https://server.greenovate.in/submit-form-job-application', {
         method: 'POST',
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
     .then(data => {
         popup.style.display = 'none';
-        form.reset();
+        this.reset();
     })
     .catch((error) => {
         console.error('Error:', error);
