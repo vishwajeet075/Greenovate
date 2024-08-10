@@ -3,10 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Careers</title>
+    <title>Careers at Greenovate Solutions | Join Our Team</title>
+
     <link rel="stylesheet" href="careers.css">
     <link rel="stylesheet" href="media-queriesCAREER.css">
- 
+    <script src="career.js"></script>
+        <!-- SEO Meta Tags -->
+        <meta name="description" content="Explore career opportunities at Greenovate Solutions. Join our team and contribute to innovative carbon capture solutions for a sustainable future.">
+        <meta name="keywords" content="Greenovate Solutions careers, carbon capture jobs, sustainability careers, environmental jobs, research intern, process engineer, digital content development">
+        <meta name="author" content="Greenovate Solutions">
+        
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Careers at Greenovate Solutions | Join Our Team">
+        <meta property="og:description" content="Explore career opportunities at Greenovate Solutions. Join our team and contribute to innovative carbon capture solutions for a sustainable future.">
+        <meta property="og:image" content="https://www.greenovatesolutions.com/path/to/social-share-image.jpg">
+        <meta property="og:url" content="https://www.greenovatesolutions.com/careers.html">
+        <meta property="og:type" content="website">
+    
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Careers at Greenovate Solutions | Join Our Team">
+        <meta name="twitter:description" content="Explore career opportunities at Greenovate Solutions. Join our team and contribute to innovative carbon capture solutions for a sustainable future.">
+        <meta name="twitter:image" content="https://www.greenovatesolutions.com/path/to/social-share-image.jpg">
+    
+    
 
 
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
@@ -119,34 +139,35 @@
                         <li>Adobe Illustrator</li>
                         <li>Adobe Premiere Pro or any video editing software</li>
                     </ul>
-                    <button class="apply-button" id="open">Apply Now</button>
+                    <a href="#" class="apply-button">Apply Now</a>
                 </div>
             </div>
             <img src="greenfull.png" alt="Greenovate Solutions Pvt Ltd" id="greenfull">
 
         </section>
-       <div class="popup-overlay" id="popupOverlay">
-        <div class="popup-form">
-          <div class="popup-header">
-            <img src="logo.jpg" alt="Greenovate Logo">
-            <button class="close-btn" id="closePopupBtn">&times;</button>
-          </div>
-          <h2>Job Application</h2>
-          <form id="registerForm">
-            <input type="text" name="name" placeholder="Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="text" name="role" placeholder="Role Applying for" required>
-            <input type="text" name="qualification" placeholder="Qualification" required>
-            <div class="form-row">
-                <input type="text" name="location" placeholder="Location" required style="margin-bottom: 0;">
-                <div class="file-upload">
-                  <label for="cv">Upload CV</label>
-                  <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+        <div id="applicationPopup" class="popup">
+            <div class="popup-content">
+                <div class="popup-header">
+                    <img src="logo[1].jpg" alt="Greenovate Logo" class="logo">
+                    <span class="close">&times;</span>
                 </div>
-              </div>
-            <textarea name="coverLetter" placeholder="Cover Letter" required></textarea>
-            <button type="submit" class="submit-btn">Submit</button>
-          </form>
+                <h2>Job Application</h2>
+                <form id="applicationForm">
+                    <input type="text" name="name" placeholder="Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="text" name="role" placeholder="Role Applying for" required>
+                    <input type="text" name="qualification" placeholder="Qualification" required>
+                    <div class="form-row">
+                        <input type="text" name="location" placeholder="Location" required>
+                        <div class="file-upload">
+                            <label for="cv">Upload CV  &ThinSpace; &MediumSpace; &MediumSpace; v</label>
+                            <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                        </div>
+                    </div>
+                    <textarea name="coverLetter" placeholder="Cover Letter" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
         </div>
         <img src="CIRCLES_3[1].png" alt="Careers at Greenovate" id="half">
 
@@ -239,7 +260,63 @@ Beside COEP Boat Club, College of Engineering, Shivajinagar, Pune, Maharashtra 4
             <p>&copy; 2024 Greenovate Solutions. All rights Reserved.</p>
         </div>
     </footer>
-    <script src="career.js"></script>
-  
+    <script>
+        const applyButtons = document.querySelectorAll('.apply-button');
+        const popup = document.getElementById('applicationPopup');
+        const closeBtn = document.querySelector('.close');
+ 
+
+applyButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.style.display = 'block';
+        const role = e.target.closest('.info-box1, .info-box2, .info-box3').querySelector('h3').textContent;
+        document.querySelector('input[name="role"]').value = role;
+    });
+});
+
+closeBtn.onclick = () => popup.style.display = 'none';
+
+window.onclick = (event) => {
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+};
+
+ document.getElementById('applicationForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const formData = new FormData();
+    
+    formData.append('name', this.name.value);
+    formData.append('email', this.email.value);
+    formData.append('role', this.role.value);
+    formData.append('qualification', this.qualification.value);
+    formData.append('location', this.location.value);
+    formData.append('coverLetter', this.coverLetter.value);
+    
+    // Append the file
+    const cvFile = this.cv.files[0];
+    if (cvFile) {
+        formData.append('cv', cvFile, cvFile.name);
+    }
+
+    fetch('https://server.greenovate.in/submit-form-job-application', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        popup.style.display = 'none';
+        form.reset();
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+});
+
+
+        </script>
 </body>
 </html>
