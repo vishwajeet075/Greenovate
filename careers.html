@@ -264,7 +264,7 @@ Beside COEP Boat Club, College of Engineering, Shivajinagar, Pune, Maharashtra 4
         const applyButtons = document.querySelectorAll('.apply-button');
         const popup = document.getElementById('applicationPopup');
         const closeBtn = document.querySelector('.close');
-       const form = document.getElementById('applicationForm');
+ const form = document.getElementById('applicationForm');
 
 applyButtons.forEach(button => {
     button.addEventListener('click', (e) => {
@@ -283,13 +283,13 @@ window.onclick = (event) => {
     }
 };
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', async function(e) {  // Use a regular function
     e.preventDefault();
 
-    // Use `new FormData(this)` to automatically get all the form fields
-    const formData = new FormData(this);
+    // Use `e.target` to get the form element
+    const formData = new FormData(e.target);
 
-    // Append the file manually if needed (it's already included by `new FormData(this)`)
+    // Append the file manually if needed (it's already included by `new FormData(e.target)`)
     const cvFile = form.querySelector('input[name="cv"]').files[0];
     if (cvFile) {
         formData.set('cv', cvFile, cvFile.name); // Use `set` to override if necessary
@@ -309,6 +309,7 @@ form.addEventListener('submit', async (e) => {
         alert('An error occurred. Please try again.');
     }
 });
+
 
 
         </script>
