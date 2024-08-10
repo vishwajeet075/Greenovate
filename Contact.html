@@ -258,8 +258,7 @@ document.addEventListener("DOMContentLoaded", function() {
   .then(response => response.json())
   .then(data => {
     if (data.success) {
-      alert('Form submitted successfully');
-      // Optionally reset the form here
+     this.reset();
     } else {
       alert('Error submitting form: ' + data.message);
     }
