@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   
-  document.getElementById('registerForm').addEventListener('submit', function(e) {
+  document.getElementById('applicationForm').addEventListener('submit', function(e) {
     e.preventDefault();
 
     const formData = new FormData();
