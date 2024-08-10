@@ -66,58 +66,5 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-/*document.addEventListener('DOMContentLoaded', () => {
-    const openPopupBtn = document.getElementById('open');
-    const closePopupBtn = document.getElementById('closePopupBtn');
-    const popupOverlay = document.getElementById('popupOverlay');
-  
-    openPopupBtn.addEventListener('click', () => {
-      popupOverlay.classList.add('active');
-    });
-  
-    closePopupBtn.addEventListener('click', () => {
-      popupOverlay.classList.remove('active');
-    });
-  
-    window.addEventListener('click', (event) => {
-      if (event.target === popupOverlay) {
-        popupOverlay.classList.remove('active');
-      }
-    });
-  });*/
-  
-  
-  document.getElementById('applicationForm').addEventListener('submit', function(e) {
-    e.preventDefault();
 
-    const formData = new FormData();
-    
-    formData.append('name', this.name.value);
-    formData.append('email', this.email.value);
-    formData.append('role', this.role.value);
-    formData.append('qualification', this.qualification.value);
-    formData.append('location', this.location.value);
-    formData.append('coverLetter', this.coverLetter.value);
-    
-    // Append the file
-    const cvFile = this.cv.files[0];
-    if (cvFile) {
-        formData.append('cv', cvFile, cvFile.name);
-    }
-
-    fetch('https://server.greenovate.in/submit-form-job-application', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        document.getElementById('popupOverlay').style.display = 'none';
-        this.reset(); 
-        alert('Application submitted successfully');
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        alert('An error occurred. Please try again.');
-    });
-});
 
