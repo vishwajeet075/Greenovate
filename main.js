@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
       comment: this.comment.value
     };
   
-    fetch('https://api.greenovate.in/submit-form', {
+    fetch('https://server.greenovate.in/submit-form', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -179,7 +179,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
      message: this.message.value
     };
   
-    fetch('https://api.greenovate.in/submit-form-1', {
+    fetch('https://server.greenovate.in/submit-form-1', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
