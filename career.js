@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const openPopupBtn = document.getElementById('open');
     const closePopupBtn = document.getElementById('closePopupBtn');
     const popupOverlay = document.getElementById('popupOverlay');
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
         popupOverlay.classList.remove('active');
       }
     });
-  });
+  });*/
   
   
   document.getElementById('applicationForm').addEventListener('submit', function(e) {
