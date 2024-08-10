@@ -307,9 +307,6 @@ window.onclick = (event) => {
     })
     .then(response => response.json())
     .then(data => {
-        document.getElementById('popupOverlay').style.display = 'none';
-        this.reset(); 
-        alert('Application submitted successfully');
         popup.style.display = 'none';
         form.reset();
     })
