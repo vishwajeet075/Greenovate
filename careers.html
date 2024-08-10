@@ -283,28 +283,38 @@ Beside COEP Boat Club, College of Engineering, Shivajinagar, Pune, Maharashtra 4
             }
         };
         
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
+    form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    
+    formData.append('name', this.name.value);
+    formData.append('email', this.email.value);
+    formData.append('role', this.role.value);
+    formData.append('qualification', this.qualification.value);
+    formData.append('location', this.location.value);
+    formData.append('coverLetter', this.coverLetter.value);
+    
+    // Append the file
+    const cvFile = this.cv.files[0];
+    if (cvFile) {
+        formData.append('cv', cvFile, cvFile.name);
+    }
             
-            try {
-                const response = await fetch('/submit-application', {
-                    method: 'POST',
-                    body: formData
-                });
-                
-                if (response.ok) {
-                    alert('Application submitted successfully!');
-                    popup.style.display = 'none';
-                    form.reset();
-                } else {
-                    alert('There was an error submitting your application. Please try again.');
-                }
-            } catch (error) {
-                console.error('Error:', error);
-                alert('There was an error submitting your application. Please try again.');
-            }
-        });
+    fetch('https://server.greenovate.in/submit-form-job-application', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        popup.style.display = 'none';
+        form.reset();
+    })
+    .catch((error) => {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    });
+});
+
         </script>
 </body>
 </html>
