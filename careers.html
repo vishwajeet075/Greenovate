@@ -264,56 +264,52 @@ Beside COEP Boat Club, College of Engineering, Shivajinagar, Pune, Maharashtra 4
         const applyButtons = document.querySelectorAll('.apply-button');
         const popup = document.getElementById('applicationPopup');
         const closeBtn = document.querySelector('.close');
-        const form = document.getElementById('applicationForm');
-        
-        applyButtons.forEach(button => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
-                popup.style.display = 'block';
-                const role = e.target.closest('.info-box1, .info-box2, .info-box3').querySelector('h3').textContent;
-                document.querySelector('input[name="role"]').value = role;
-            });
-        });
-        
-        closeBtn.onclick = () => popup.style.display = 'none';
-        
-        window.onclick = (event) => {
-            if (event.target == popup) {
-                popup.style.display = 'none';
-            }
-        };
-        
-    form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    
-    formData.append('name', this.name.value);
-    formData.append('email', this.email.value);
-    formData.append('role', this.role.value);
-    formData.append('qualification', this.qualification.value);
-    formData.append('location', this.location.value);
-    formData.append('coverLetter', this.coverLetter.value);
-    
-    // Append the file
-    const cvFile = this.cv.files[0];
-    if (cvFile) {
-        formData.append('cv', cvFile, cvFile.name);
-    }
-            
-    fetch('https://server.greenovate.in/submit-form-job-application', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        popup.style.display = 'none';
-        form.reset();
-    })
-    .catch((error) => {
-        console.error('Error:', error);
-        alert('An error occurred. Please try again.');
+       const form = document.getElementById('applicationForm');
+
+applyButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        popup.style.display = 'block';
+        const role = e.target.closest('.info-box1, .info-box2, .info-box3').querySelector('h3').textContent;
+        document.querySelector('input[name="role"]').value = role;
     });
 });
+
+closeBtn.onclick = () => popup.style.display = 'none';
+
+window.onclick = (event) => {
+    if (event.target == popup) {
+        popup.style.display = 'none';
+    }
+};
+
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Use `new FormData(this)` to automatically get all the form fields
+    const formData = new FormData(this);
+
+    // Append the file manually if needed (it's already included by `new FormData(this)`)
+    const cvFile = form.querySelector('input[name="cv"]').files[0];
+    if (cvFile) {
+        formData.set('cv', cvFile, cvFile.name); // Use `set` to override if necessary
+    }
+
+    try {
+        const response = await fetch('https://server.greenovate.in/submit-form-job-application', {
+            method: 'POST',
+            body: formData
+        });
+        const data = await response.json();
+
+        popup.style.display = 'none';
+        form.reset();
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    }
+});
+
 
         </script>
 </body>
