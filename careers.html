@@ -285,8 +285,8 @@ window.onclick = (event) => {
 
 document.getElementById('applicationForm').addEventListener('submit', function(e) {
     e.preventDefault();
+ console.log('Form submission started');
     const formData = new FormData(this);
-    
     const cvFile = this.cv.files[0];
     if (cvFile) {
         const MAX_FILE_SIZE = 200 * 1024 * 1024; // 200MB
@@ -295,7 +295,8 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
             return;
         }
     }
-
+   
+    console.log('Sending fetch request');
     fetch('https://server.greenovate.in/submit-form-job-application', {
         method: 'POST',
         body: formData
@@ -307,8 +308,10 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
         return response.json();
     })
     .then(data => {
+        console.log('Success:', data);
         popup.style.display = 'none';
         this.reset();
+        alert('Application submitted successfully');
     })
     .catch((error) => {
         console.error('Error:', error);
