@@ -460,7 +460,7 @@ html, body {
     font-size: 14px;
     width: 100%;
     padding-left: 5%;
-    text-align: left;
+    text-align: center;
   }
 
   .gradient {
@@ -712,7 +712,7 @@ html, body {
   }
   .img1{
     border-radius: 15px;
-    max-width: 90%;
+    max-width: 95%;
   }
 }
 
@@ -867,7 +867,7 @@ html, body {
   
   .text p {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 12px;
   }
   .description{
     width: 100%;
