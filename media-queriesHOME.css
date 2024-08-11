@@ -1,6 +1,9 @@
-/* Responsive styles */
 
-/* Hamburger menu for mobile */
+body{
+    background-color:#FBFDFA;
+}
+
+
 @media (max-width:1024px){
     .footer-sections {
         margin-left: 5%;
