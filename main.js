@@ -179,7 +179,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
      message: this.message.value
     };
   
-    fetch('https://server.greenovate.in/submit-form-1', {
+    fetch('https://server2.greenovate.in/submit-form-1', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -196,6 +196,7 @@ document.getElementById('contact-form').addEventListener('submit', function(e) {
     });
   });
 
-  document.getElementById('learn-btn').addEventListener('click', function() {
+/*  document.getElementById('learn-btn').addEventListener('click', function() {
     document.getElementById('target').scrollIntoView({ behavior: 'smooth' });
 });
+*/
