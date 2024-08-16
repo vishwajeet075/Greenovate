@@ -1009,9 +1009,7 @@ body{
         margin-top:5%;
         margin-bottom:15%;
     }
-    .learn-image {
-        width: 500%;
-    }
+   
 
     #learn1, #learn2, #learn3 {
         font-size: 16px;
@@ -1049,7 +1047,7 @@ body{
         width: 90%;
     }
     .learn-image{
-        width:100%;
+        width:120%;
     }
     .learn-image2{
         width:80%;
