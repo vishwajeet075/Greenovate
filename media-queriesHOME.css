@@ -99,6 +99,7 @@ body{
         gap:8vw;
         max-width:100%;
     }
+      
     .right-content img {
         margin-right: 0;
         max-width: 500px;
@@ -137,9 +138,17 @@ body{
         gap:10vw;
         max-width:100%;
     }
+      .left-content {
+        height: auto;
+        width: 100%;
+        max-width: 660px;
+        margin-top:4%;
+        margin-left:-1%;
+
+    }
     .right-content img {
         margin-right: 0;
-        max-width: 100%;
+        max-width: 300%;
         margin: 0;
         margin-left: -120px;
         width: 3500.53px;
