@@ -562,7 +562,7 @@ html, body {
   flex: 1;
   font-weight: 700;
   font-size: 3.5vw; 
-  margin-left: 70px;
+  margin-left: 80px;
   line-height: 1.2;
   max-width: 50%; 
   
@@ -584,7 +584,7 @@ html, body {
   text-decoration: none;
   text-align: center; 
   cursor: pointer; 
-  margin-right: 5%;
+  margin-right: 6%;
 }
 
 @media (max-width: 1024px) {
@@ -629,13 +629,12 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 100px;
   margin-bottom: 100px;
   text-align: center; 
 }
 
-.img1 {
-  max-width: 80%; 
+.img1 { 
   height: auto;
   border-radius: 20px;
 }
