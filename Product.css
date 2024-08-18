@@ -314,6 +314,9 @@ html, body {
   background-color:lightgreen;
   
 }
+.learn:hover{
+ background-color: white;
+}
 
 .box2 {
   display: flex;
@@ -892,6 +895,18 @@ html, body {
     font-size: 28px;
   }
 }
+
+@media (min-width:1500px){
+.new{
+  margin-inline:auto;
+}
+.image-grid{
+  margin-inline:auto;
+}
+
+
+}
+
 .circle3 {
   width: 160px;
   height: 160px;
@@ -1922,9 +1937,9 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-  width: 90%;
+  width: 80%;
 }}@media screen and (max-width: 480px) { .form-wrapper {
-  width: 95%;
+  width: 90%;
 }
 
 #getinheader1 {
@@ -1936,7 +1951,7 @@ footer {
 }
 
 .submit-btn {
-  width:90%;
+  width:70%;
 }}
 
 
