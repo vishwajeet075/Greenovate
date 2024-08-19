@@ -92,7 +92,7 @@ body{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-left: 5%;
+        margin-left: 4%;
         margin-bottom: 20%;
         margin-top: 2%;
         overflow: hidden;
@@ -102,7 +102,7 @@ body{
       
     .right-content img {
         margin-right: 0;
-        max-width: 500px;
+        max-width: 100px;
         margin: 0;
         margin-left: -120px;
         width: 1900.53px;
