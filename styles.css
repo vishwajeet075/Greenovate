@@ -680,7 +680,7 @@ margin-right:30%;
 
 .image-scroll-wrapper {
     display: flex;
-
+    overflow-x: scroll;
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none; /* Firefox */
