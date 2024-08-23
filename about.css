@@ -280,6 +280,8 @@ margin-bottom:0;
 .text-section {
     flex: 1;
     margin-left: 3%;
+    margin-top: 20%;
+    margin-bottom: 12%;
 }
 
 .gradient-line {
@@ -287,7 +289,7 @@ margin-bottom:0;
     width: 80%;
     max-width: 500px;
     border-radius: 25px;
-    margin: -4% 0 0 8%;
+    margin: -4% 0 10% 8%;
     background: linear-gradient(to right, #222826, #066DB7, #61C977);
 }
 
