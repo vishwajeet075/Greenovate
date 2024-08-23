@@ -537,67 +537,6 @@ h2 {
 
 
 
-/* Footer Styles */
-footer {
-    background-color: #F2F2F2;
-    color: black;
-    padding: 20px 0;
-    margin-left: 10%;
-    margin-top: 3%;
-    margin-right: 5%;
-}
-
-.footer-sections {
-    display: flex;
-    justify-content: space-around;
-}
-
-.footer-section {
-    flex: 1;
-    padding: 0 20px;
-}
-
-.footer-section h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-}
-
-.footer-section ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: 5px;
-}
-
-.footer-section img {
-    max-width: 200px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.social-media-icons {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.social-media-icons a {
-    margin: 0 10px; /* Adjust the spacing between icons */
-}
-
-.social-media-icons img {
-    width: 30px; /* Adjust the width of the icons */
-    height: auto; /* Maintain aspect ratio */
-}
-
-#Copy {
-    margin-left: 36%;
-    margin-top: 5%;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
