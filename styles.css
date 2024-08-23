@@ -314,9 +314,12 @@ header {
 #carboncapture {
     font-weight: bold;
 }
+#carboncapture2 {
+    font-weight: 600;
+}
 
 #l1 {
-    font-weight: medium;
+    font-weight: 600;
     padding-left: 20px;
 }
 
