@@ -1,2 +1,2 @@
 # Greenovate
-This is the Internship Project
+This is the  Greenovate Solutions private Limited company website.
