@@ -1,0 +1,869 @@
+@media screen and (max-width: 1440px) {
+    .gradient-linejourney{
+        width:85%;
+    }
+    .circle-container3{
+        display:none;
+    }
+    
+}
+@media screen and (max-width: 1740px) {
+    .gradient-linejourney{
+        width:85%;
+    }
+    .circle-container3{
+        display:none;
+    }
+
+}
+@media screen and (max-width: 1940px) {
+    .gradient-linejourney{
+        width:85%;
+    }
+    .circle-container3{
+        display:none;
+    }
+    #firstc{
+        display:none;
+    }
+    
+   
+}
+
+@media screen and (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        margin-bottom: 0;
+    }
+    
+
+    .text-section, .image-section {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .text-section h1 {
+        font-size: 34px;
+        margin-top: 0;
+        text-align: left;
+        margin-top:5%;
+    }
+
+    .gradient-line {
+        margin: 20px auto;
+        height: 3px;
+    width: 28%;
+    max-width: 500px;
+    border-radius: 25px;
+    margin: 2% 0 0 8%;
+    background: linear-gradient(to right, #222826, #066DB7, #61C977);
+    }
+
+    .image-section img {
+        margin-right: 0;
+        max-width: 50%;
+    }
+    #aboutus {
+        font-size: 20px;
+    }
+
+    #abouth4id {
+        font-size: 20px;
+        margin-left:2%;
+        margin-right:2%;
+    }
+    .mission-vision {
+        margin: 0 2%;
+    }
+
+    .section h3 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 14px;
+        text-align: justify;
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+    .founder-section {
+        margin: 60px 5%;
+    }
+
+    .founder-text h3 {
+        font-size: 36px;
+    }
+
+    .founder-text h2 {
+        font-size: 24px;
+    }
+
+    #foundertext {
+        font-size: 16px;
+    }
+    .gradient-linejourney {
+        display:none;
+    }
+   
+
+   
+
+    .achievement-item img {
+        height: 100px;
+    }
+
+    .achievement-item.vertical img {
+        max-height:100%;
+
+    }
+    .careers-section {
+        margin: 20px 5%;
+    }
+    
+    .careers-section .center-headline {
+        font-size: 40px;
+    }
+    
+    .center-text {
+        font-size: 16px;
+    }
+    
+    .career-headlines h4 {
+        font-size: 18px;
+    }
+    .footer-sections {
+        margin-left: 5%;
+    }
+    
+    .footer-section {
+        min-width: 120px;
+    }
+    #firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+    
+
+    
+
+}
+
+@media screen and (max-width: 768px) {
+   
+    .text-section h1 {
+        font-size: 26px;
+        text-align: left;
+        margin-right: 30%;
+        font-weight:bold;
+        margin-top:5%;
+        margin-left:10%;
+    }
+    .gradient-line{
+
+    
+    height: 3px;
+    width: 28%;
+    max-width: 500px;
+    border-radius: 25px;
+    margin: 2% 0 0 12%;
+    background: linear-gradient(to right, #222826, #066DB7, #61C977);
+    }
+    .image-section{
+        max-width:100%;
+    }
+    
+    
+    .underline {
+        border-bottom: 1px solid #ddd;
+        margin: 10px 0 20px;
+        width: 100%;
+    }
+    
+    .green-text {
+        color: #61C977;
+    }
+    .nextabout {
+        margin-bottom: 8%;
+    
+    }
+
+    #aboutus {
+        font-size: 28px;
+        text-align: left;
+    
+    }
+
+    #abouth4id {
+        font-size: 18px;
+        text-align: left;
+        padding-left: 0;
+        margin-left:2%;
+        margin-right:2%;
+    }
+    .hide-on-mobile::before {
+        content: '';  /* Remove the line break for mobile screens */
+    }
+    .hide-on-mobile br {
+        display: none;  /* Hide <br> tags on mobile screens */
+    }
+    
+    .mission-vision {
+        padding: 20px;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .section-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section {
+        margin-left: 5%;
+    margin-right: 5%;
+
+    width: 90%; /* Changed from 50% to 90% */
+    max-width: 400px; /* Add a max-width for larger screens */
+    margin-top: 0;
+    background-color: #CBE2F9;
+    border-radius: 20px;
+    padding: 40px; /* Reduced padding */
+    }
+
+    .section h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .section h3 br{
+        display:none;
+    }
+
+    .section p {
+       font-size: 14px;
+    text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word;
+
+    }
+
+    .sepvm {
+        display: none;
+    }
+    .founder-section {
+        flex-direction: column;
+        margin: 40px 3%;
+    }
+
+    .founder-image, .founder-text {
+        width: 100%;
+        max-width: none;
+    }
+
+    .founder-text {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    .founder-text h3 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .founder-text h2 {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .founder-text p, #foundertext {
+        font-size: 14px;
+    }
+    .journey-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5%;
+        
+    }
+
+    .center-headline {
+        font-size: 32px;
+        margin-bottom: -5%;
+    }
+
+    .journey-row, .journey-row-2 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .journey-text {
+        display: contents; /* This allows the children to be positioned independently */
+    }
+
+    .journey-heading, .journey-heading2, .journey-heading3 {
+        font-weight: 700;
+        text-align: left;
+        margin: 20px 0 30px;
+        font-size: 22px !important;
+        line-height: 1.2;
+        padding-top: 20px;
+    
+    }
+
+    .journey-image {
+        width: 100%;
+        margin-bottom: 20px;
+        order: 2;
+    }
+
+    .journey-image img {
+        width:  90%;
+        height: auto;
+        border-radius: 25px;
+        align-items: left;
+    }
+
+    .journey-description, .journey-description2, .journey-description3 {
+        font-size: 14px;
+        margin: 0;
+        text-align: left;
+        order: 3;
+    }
+
+    .journey-heading, .journey-heading2, .journey-heading3,
+    .journey-description, .journey-description2, .journey-description3 {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
+    .circle-container2{
+        display:none;
+    }
+    .container{
+        display:none;
+    }
+    .gradient-linejourney {
+       display:none;
+    }
+    .achievements-row {
+        flex-direction: column;
+        padding: 20px 5%;
+    }
+
+    .achievement-item.vertical,
+    .achievement-column {
+        width: 100%;
+    }
+
+    .achievement-item img {
+        height: 200px;
+    }
+
+    .achievement-item.vertical img {
+        height: 300px;
+    }
+    .careers-section {
+        margin: 20px 2%;
+        padding:20px;
+    }
+    
+    .careers-section .center-headline {
+        font-size: 32px;
+        margin-bottom:2%;
+    }
+    
+    .career-headlines {
+        flex-direction: column;
+    }
+    .center-text{
+        font-size: 14px;
+    }
+    
+    .career-headlines h4 {
+        margin: 10px 0;
+    }
+    
+    .green-button {
+        width: 100%;
+        max-width: 200px;
+    }
+    .footer-sections {
+        justify-content: flex-start;
+        margin-left: 0;
+    }
+    
+    .footer-section {
+        flex-basis: calc(50% - 20px);
+    }
+    
+    .separator {
+        display: none;
+    }
+    #firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+    
+
+
+}
+
+    
+
+
+@media screen and (max-width: 480px) {
+    .text-section h1 {
+        font-size: 20px;
+    }
+
+    .gradient-line{
+
+    
+        height: 3px;
+        width: 28%;
+        max-width: 500px;
+        border-radius: 25px;
+        margin: 2% 0 0 10%;
+        background: linear-gradient(to right, #222826, #066DB7, #61C977);
+        }
+    .image-section{
+        max-width:100%;
+    }
+    .image-section img{
+        width:700%;
+    }
+   
+    
+    
+    .underline {
+        border-bottom: 1px solid #ddd;
+        margin: 10px 0 20px;
+        width: 100%;
+    }
+    
+    .green-text {
+        color: #61C977;
+    }
+    .nextabout {
+        margin-bottom: 8%;
+    
+    }
+
+    #aboutus {
+        margin-top:-22%;
+        font-size: 20px;
+        text-align: left;
+    
+    }
+
+    #abouth4id {
+        font-size: 13px;
+        text-align: left;
+        padding-left: 0;
+        font-weight:400;
+ }
+    .mission-vision {
+        padding: 20px;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+}
+
+    .section-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section {
+        margin-left: -1%;
+    margin-right: 5%;
+    width: 90%; /* Changed from 50% to 90% */
+    max-width: 400px; /* Add a max-width for larger screens */
+    margin-top: 0;
+    background-color: #CBE2F9;
+    border-radius: 20px;
+    padding: 20px; /* Reduced padding */
+    }
+
+    .section h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .section h3 br{
+        display:none;
+    }
+
+    .section p {
+       font-size: 10.5px;
+    text-align: center;
+    hyphens: auto;
+    word-wrap: break-word;
+    justify-content: center;
+
+    }
+
+    .sepvm {
+        display: none;
+    }
+    .founder-section {
+        margin: 30px 2%;
+        padding: 15px;
+    }
+
+    .founder-text h3 {
+        font-size: 24px;
+    }
+
+    .founder-text h2 {
+        font-size: 16px;
+    }
+
+    .founder-text p, #foundertext {
+        font-size: 11px;
+    }
+    .gradient-linejourney {
+        display:none;
+     }
+     .achievements-section .center-headline {
+        font-size: 36px;
+        margin-bottom: 0;
+    }
+
+    .achievement-item img,
+    .achievement-item.vertical img {
+        height: 180px;
+        margin-left:-1%;
+    }
+    .achievement-item img{
+        margin-left:-8%;
+    }
+    .achievement-title{
+        width:102%;
+        margin-left:-4%;
+    }
+    .sub-title {
+        font-size:12px;
+    }
+    .title-bg1 {
+        width:100%;
+        margin-left:-1%;
+
+
+    }
+    .title-bg2{
+        width:99.9%;
+
+    }
+    .title-bg3{
+        width:99.9%;
+
+    }
+    .careers-section .center-headline {
+        font-size: 24px;
+        margin-bottom:2px;
+       
+    }
+    .careers-section{
+        font-size: 14px;
+        max-width:80%;
+        margin-left:10%;
+        margin-right:10%;
+    }
+    
+    
+    .center-text {
+        font-size: 12px;
+    }
+    
+    .career-headlines h4 {
+        font-size: 16px;
+    }
+    .center-button{
+        width:100px;
+        margin-left:-15%;
+    }
+   /* Existing CSS remains unchanged */
+
+/* Add this media query at the end of your CSS file */
+@media (max-width: 480px) {
+    .footer-content {
+        flex-direction: column;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .footer-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+
+    .link-column {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+
+    .footer-brand {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .social-icons {
+        justify-content: center;
+        margin: 20px auto 0;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
+}
+  
+    #firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+
+}
+
+
+@media screen and (max-width: 390px){
+    .mission-vision {
+        padding: 20px;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .section-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section {
+        margin-left: -1%;
+    margin-right: 5%;
+    width: 90%; /* Changed from 50% to 90% */
+    max-width: 400px; /* Add a max-width for larger screens */
+    margin-top: 0;
+    background-color: #CBE2F9;
+    border-radius: 20px;
+    padding: 20px; /* Reduced padding */
+    }
+
+    .section h3 {
+        font-size: 14px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .section h3 br{
+        display:none;
+    }
+
+    .section p {
+       font-size: 10px;
+    text-align: center;
+    hyphens: auto;
+    word-wrap: break-word;
+    justify-content: center;
+
+    }
+
+    .sepvm {
+        display: none;
+    }
+    .gradient-linejourney {
+        display:none;
+     }
+     .firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+
+
+}
+@media screen and (width: 840px){
+    .mission-vision {
+        padding: 20px;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .section-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section {
+        margin-left: 15%;
+    margin-right: 5%;
+    width: 90%; /* Changed from 50% to 90% */
+    max-width: 400px; /* Add a max-width for larger screens */
+    margin-top: 0;
+    background-color: #CBE2F9;
+    border-radius: 20px;
+    padding: 20px; /* Reduced padding */
+    }
+
+    .section h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .section h3 br{
+        display:none;
+    }
+
+    .section p {
+       font-size: px;
+    text-align: justify;
+    hyphens: auto;
+    word-wrap: break-word;
+    justify-content: center;
+
+    }
+
+    .sepvm {
+        display: none;
+    }
+    .gradient-linejourney {
+        display:none;
+     }
+     .firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+
+
+}
+
+@media screen and (width: 540px){
+    .mission-vision {
+        padding: 20px;
+        margin: 0;
+        background-color: transparent;
+        border: none;
+    }
+
+    .section-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .section {
+        margin-left: 5%;
+    margin-right: 5%;
+    width: 90%; /* Changed from 50% to 90% */
+    max-width: 400px; /* Add a max-width for larger screens */
+    margin-top: 0;
+    background-color: #CBE2F9;
+    border-radius: 20px;
+    padding: 20px; /* Reduced padding */
+    }
+
+    .section h3 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .section h3 br{
+        display:none;
+    }
+
+    .section p {
+       font-size: 10px;
+    text-align:center;
+    hyphens: auto;
+    word-wrap: break-word;
+    justify-content: center;
+
+    }
+
+    .sepvm {
+        display: none;
+    }
+    .gradient-linejourney {
+        display:none;
+     }
+     .firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+
+
+}
+@media screen and (width: 820px){
+    .mission-vision {
+        margin: 0 2%;
+    }
+
+    .section h3 {
+        font-size: 24px;
+    }
+
+    .section p {
+        font-size: 11px;
+        font-weight: 300;
+        text-align: center;
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+    .gradient-linejourney {
+        display:none;
+     }
+     .firstc{
+        display: none;
+     }
+     #circlelast{
+        display:none;
+     }
+     .sponsor-separator2{
+        display:none;
+     }
+
+}
+
+
+
+
