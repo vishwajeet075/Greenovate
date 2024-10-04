@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const metrics = {
         industry: {
             metric1: { value: "85-90%", desc: "Capture Efficiency", detail: "Tube CC's capture efficiency directly from the emission streams", arrow: "../assets/images/arrow.png" },
-            metric2: { value: "80-85%", desc: "Conversion Rate", detail: "Converted to liquid Carbon Dioxide", arrow: "arrow.png" },
+            metric2: { value: "80-85%", desc: "Conversion Rate", detail: "Converted to liquid Carbon Dioxide", arrow: "../assets/images/arrow.png" },
             metric3: { value: "30%", desc: "Reduction in capital cost", detail: "No installation cost, and much lower regeneration energy requirements", arrow: "../assets/images/arrow_down.png" }
         },
         people: {
-            metric1: { value: "95%", desc: "Air Quality Improvement", detail: "Significant reduction in workplace air pollution ensuring healthier breathing environments for workers.", arrow: "arrow.png" },
+            metric1: { value: "95%", desc: "Air Quality Improvement", detail: "Significant reduction in workplace air pollution ensuring healthier breathing environments for workers.", arrow: "../assets/images/arrow.png" },
             metric2: { value: "70%", desc: "Health Risk Reduction", detail: "Decreases exposure to harmful emissions, reducing health risks for employees.", arrow: "../assets/images/arrow_down.png" },
-            metric3: { value: "50%", desc: "Increased Productivity", detail: "Healthier air leads to better overall employee well-being and enhanced productivity.", arrow: "arrow.png" }
+            metric3: { value: "50%", desc: "Increased Productivity", detail: "Healthier air leads to better overall employee well-being and enhanced productivity.", arrow: "../assets/images/arrow.png" }
         },
         planet: {
             metric1: { value: "60%", desc: "Reduction in Greenhouse Gases", detail: "Effective carbon capture significantly lowers overall greenhouse gas emissions.", arrow: "../assets/images/arrow_down.png" },
