@@ -818,10 +818,10 @@ html, body {
   font-size: 16px;
 }
 
-.grid-item:nth-child(1) .overlay { background-image: url(rect1.png); }
-.grid-item:nth-child(2) .overlay { background-image: url(rect2.png); }
-.grid-item:nth-child(3) .overlay { background-image: url(rect3.png); }
-.grid-item:nth-child(4) .overlay { background-image: url(rect4.png); }
+.grid-item:nth-child(1) .overlay { background-image: url(../assets/images/rect1.png); }
+.grid-item:nth-child(2) .overlay { background-image: url(../assets//images/rect2.png); }
+.grid-item:nth-child(3) .overlay { background-image: url(../assets/images/rect3.png); }
+.grid-item:nth-child(4) .overlay { background-image: url(../assets/images/rect4.png); }
 
 @media (max-width: 1024px) {
   .title { font-size: 36px; }
@@ -1002,8 +1002,8 @@ html, body {
 @media (max-width: 768px) {
   .features {
     width: 90%;
-    padding: 10vw 2vw; /* Increased padding for mobile */
-    margin-bottom: 8vw; /* Increased bottom margin for mobile */
+    padding: 10vw 2vw; 
+    margin-bottom: 8vw; 
   }
   
   .d {
